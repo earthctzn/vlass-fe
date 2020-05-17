@@ -1,0 +1,192 @@
+@font-face {
+  font-family: lemonMilk-bold;
+  src: url(/media/fonts/LEMONMILK-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: lemonMilk-boldItalic;
+  src: url(/media/fonts/LEMONMILK-BoldItalic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: lemonMilk-light;
+  src: url(/media/fonts/LEMONMILK-Light.otf);
+  font-weight: lighter;
+
+}
+@font-face {
+  font-family: lemonMilk-lightItalic;
+  src: url(/media/fonts/LEMONMILK-LightItalic.otf);
+  font-weight: lighter;
+  font-style: italic;
+}
+@font-face {
+  font-family: lemonMilk-medium;
+  src: url(/media/fonts/LEMONMILK-Medium.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: lemonMilk-mediumItalic;
+  src: url(/media/fonts/LEMONMILK-MediumItalic.otf);
+  font-weight: bolder;
+  font-stye: italic;
+}
+
+@font-face {
+  font-family: lemonMilk-regular;
+  src: url(/media/fonts/LEMONMILK-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: lemonMilk-regularItalic;
+  src: url(/media/fonts/LEMONMILK-RegularItalic.otf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+.App {
+  display: flex;
+  text-align: center;
+}
+.nav {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+}
+.nav .nav-content {
+  padding: 0rem 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.nav-item {
+  display: inline;
+  margin-left: 2rem;
+  color: #333;
+}
+
+
+.nav-item:hover {
+  color: rgb(167, 83, 83);
+  cursor: pointer;
+}
+
+.section, .section-content{
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+#about-content {
+  max-width: 600px;
+  align-self: center;
+  overflow-wrap: break-word;
+}
+
+
+h2 {
+  align-self: center;
+}
+#wwd{
+  height: 130px;
+  width: auto;
+  align-self: center;
+}
+
+#wflow{
+  display: flex;
+  width: auto;
+  height: 230px;
+  align-self: center;
+}
+#glass-c{
+  margin-top: 40px;
+  height: 400px;
+  width: 600px;
+  border-radius: 1em;
+  align-self: center;
+  box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+}
+
+#welcome, #work, #contact {
+  background-image: url('./media/WebPageBackground.jpg');
+  background-size: cover;
+  z-index: 4;
+  display: flex;
+  align-content: flex-start;
+}
+
+
+/* #glass-c{
+  margin-top: 40px;
+  height: 600px;
+  border-radius: 1em;
+}
+
+.container-md {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  
+}
+.nav-links{
+  display: flex;
+  align-items: space-between;
+}
+
+#home, #work, #contact {
+  background-image: url('./media/WebPageBackground.jpg');
+  background-size: cover;
+  z-index: 4;
+  box-shadow: grey;
+}
+#wfheader{
+  
+  text-shadow: 1px 1px 2px black; 
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#wflow{
+  display: flex;
+  width: auto;
+  height: 230px;
+  align-self: center;
+}
+
+.flow{
+  font-size: medium-large;
+}
+
+.App-link {
+  color: #61dafb;
+}
+ */
