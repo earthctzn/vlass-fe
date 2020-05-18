@@ -19,7 +19,8 @@ class App extends Component {
       <>
         <NavBar/>
         <Home
-          title="Hello World!"
+          title="VLASS"
+          content="BREAKING THE GLASS CEILING TO UNLOCK YOUR POTENTIAL"
           id="welcome"
         />
         <About
@@ -27,16 +28,17 @@ class App extends Component {
           id="about"
         />
         <Work
-          title="work"
+          title="WORK"
           id="work"
         />
         <Workflow
-          title="Workflow"
+          title="WORKFLOW"
+          content="THESE ARE OUR STEPS TO MAKE SURE WE DELIVER RESULTS"
           id="workflow"
         />
         <Contact
-          title="Contact"
-          content="vincent@vlass.com"
+          title="CONTACT"
+          content="vincent@vlass.co"
           id="contact"
         />
 

@@ -50,6 +50,10 @@
   display: flex;
   text-align: center;
 }
+.body{
+  font-family: lemonMilk-normal;
+}
+
 .nav {
   background-color: #ffffff;
   position: sticky;
@@ -66,6 +70,7 @@
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  font-family: lemonMilk-normal;
 }
 .nav-item {
   display: inline;
@@ -76,6 +81,7 @@
 
 .nav-item:hover {
   color: rgb(167, 83, 83);
+  font-family: lemonMilk-bold;
   cursor: pointer;
 }
 
@@ -83,7 +89,6 @@
   background-color: #ffffff;
   min-height: 100vh;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,25 +98,43 @@
 }
 #about-content {
   max-width: 600px;
-  align-self: center;
+  margin-top: 2em;
   overflow-wrap: break-word;
+  font-family: lemonMilk-normal;
+}
+p{
+  font-family: lemonMilk-bold;
 }
 
 
 h2 {
   align-self: center;
+  font-family: lemonMilk-bold;
 }
 #wwd{
-  height: 130px;
+  height: 95px;
   width: auto;
   align-self: center;
+}
+#wwd-content{
+  width: 750px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+}
+#wwd-col{
+  font-size: large;
+}
+#wwd-col-4{
+  font-size: large;
+  margin-left: 1em;
 }
 
 #wflow{
   display: flex;
   width: auto;
   height: 230px;
-  align-self: center;
+  align-items: center;
 }
 #glass-c{
   margin-top: 40px;
@@ -128,8 +151,21 @@ h2 {
   z-index: 4;
   display: flex;
   align-content: flex-start;
+  font-family: lemonMilk-Bold;
+}
+.flow{
+  margin-left: 3em;
+  font-size: medium-large;
+  font-family: lemonMilk-normal;
+}
+#wf-col{
+  font-size:  large;
 }
 
+
+#home-p{
+  margin-left: 4em;
+}
 
 /* #glass-c{
   margin-top: 40px;
@@ -182,9 +218,7 @@ h2 {
   align-self: center;
 }
 
-.flow{
-  font-size: medium-large;
-}
+
 
 .App-link {
   color: #61dafb;
