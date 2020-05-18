@@ -11,7 +11,7 @@ export default function Workflow({ title, content, id }) {
     <div className={"section"}>
       <div className="section-content" id={id}>
        
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         <div style={{padding: 20}}>
           <p>{content}</p>
         </div>

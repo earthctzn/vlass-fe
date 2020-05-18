@@ -29,7 +29,7 @@ class NavBar extends Component {
                                 to="about"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={-60}
                                 duration= {700}
                             >
                                 WHAT WE DO
@@ -42,7 +42,7 @@ class NavBar extends Component {
                                 to="work"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={-60}
                                 duration= {700}
                             >
                                 WORK
@@ -54,7 +54,7 @@ class NavBar extends Component {
                                 to="workflow"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={-60}
                                 duration= {700}
                             >
                                 WORKFLOW
@@ -67,7 +67,7 @@ class NavBar extends Component {
                                 to="contact"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={-60}
                                 duration= {700}
                             >
                                 CONTACT
