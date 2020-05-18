@@ -20,7 +20,7 @@ class NavBar extends Component {
                                 offset={-70}
                                 duration= {700}
                             >
-                                Home
+                                HOME
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -32,7 +32,7 @@ class NavBar extends Component {
                                 offset={-70}
                                 duration= {700}
                             >
-                                About
+                                WHAT WE DO
                             </Link>
                         </li>
                         
@@ -45,7 +45,7 @@ class NavBar extends Component {
                                 offset={-70}
                                 duration= {700}
                             >
-                                Work
+                                WORK
                             </Link> 
                         </li>
                         <li className="nav-item">
@@ -57,7 +57,7 @@ class NavBar extends Component {
                                 offset={-70}
                                 duration= {700}
                             >
-                                Workflow
+                                WORKFLOW
                             </Link> 
                         </li>
 
@@ -70,7 +70,7 @@ class NavBar extends Component {
                                 offset={-70}
                                 duration= {700}
                             >
-                                Contact
+                                CONTACT
                             </Link> 
                         </li>
                     </ul>

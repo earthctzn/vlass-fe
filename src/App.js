@@ -24,7 +24,8 @@ class App extends Component {
           id="welcome"
         />
         <About
-          content="THOSDFOIUFLKSdjf alksd jfao9sufal ksdjfalk dsjf lkajsdflka jsdflkja sdlfkjas dlkjasd;lfkjasld kfjalskdjfa lsdkfjalsd fkjsouertlkndvpoiuerpo tiuwerpo tiuqwtoijs lkfnvbowi uertiowuer tgkwnmdfbliwj oeirtuwoeirjt w'ldkfnb[oius whroitjw lertqw"
+          title="HELLO, WE ARE VLASS."
+          content="AT VLASS WE WORK ON TRANSFORMING YOUR BUSINESS THROUGH WEB DESIGN, CONTENT CREATION, GRAPHIC DESIGN AND MARKETING TO PREPARE YOUR BUSINESS FOR THE FUTURE."
           id="about"
         />
         <Work
@@ -38,7 +39,7 @@ class App extends Component {
         />
         <Contact
           title="CONTACT"
-          content="vincent@vlass.co"
+          content="VINCENT@VLASS.CO"
           id="contact"
         />
 

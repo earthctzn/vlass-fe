@@ -98,7 +98,7 @@
 }
 #about-content {
   max-width: 600px;
-  margin-top: 2em;
+  text-align: center;
   overflow-wrap: break-word;
   font-family: lemonMilk-normal;
 }
@@ -116,6 +116,9 @@ h2 {
   width: auto;
   align-self: center;
 }
+#wwd-h1 {
+  margin-top: 2em;
+}
 #wwd-content{
   width: 750px;
   display: flex;
@@ -125,9 +128,8 @@ h2 {
 #wwd-col{
   font-size: large;
 }
-#wwd-col-4{
-  font-size: large;
-  margin-left: 1em;
+#wwd-col{
+  text-align: center;
 }
 
 #wflow{
@@ -148,9 +150,8 @@ h2 {
 #welcome, #work, #contact {
   background-image: url('./media/WebPageBackground.jpg');
   background-size: cover;
+  background-attachment: fixed;
   z-index: 4;
-  display: flex;
-  align-content: flex-start;
   font-family: lemonMilk-Bold;
 }
 .flow{
@@ -164,7 +165,7 @@ h2 {
 
 
 #home-p{
-  margin-left: 4em;
+  text-align: center;
 }
 
 /* #glass-c{
