@@ -12,7 +12,7 @@ export default function Workflow({ title, content, id }) {
       <div className="section-content" id={id}>
        
         <h1>{title}</h1>
-        <div style={{padding: 20}}>
+        <div id="wf-content">
           <p>{content}</p>
         </div>
         <img src={Flow} id="wflow" alt="workflow graphic"></img>
@@ -23,7 +23,7 @@ export default function Workflow({ title, content, id }) {
               <Col id="wf-col" md="auto">DEVELOPMENT</Col>
               <Col id="wf-col" md="2">DELIVERY</Col>
               <Col id="wf-col" md="auto">MARKETING</Col>
-              <Col id="wf-col" md="2">RESULTS</Col>
+              <Col id="wf-col-1" md="2">RESULTS</Col>
             </Row>
           </Container>
       </div>

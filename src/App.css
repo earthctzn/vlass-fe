@@ -119,6 +119,11 @@ h1 {
   align-self: center;
 }
 
+#wf-content{
+  padding: 20px;
+  margin-top: 2em;
+}
+
 #wwd-h1  {
   margin-top: 2em;
   font-size: 1.6em;
@@ -143,6 +148,9 @@ h1 {
   height: 230px;
   align-items: center;
 }
+/* #wflow-steps {
+  margin-left:  15px;
+} */
 #glass-c{
   margin-top: 40px;
   height: 400px;
@@ -160,12 +168,19 @@ h1 {
   font-family: lemonMilk-Bold;
 }
 .flow{
-  margin-left: 3em;
+  margin-left: auto;
+  align-items: start;
   font-size: medium-large;
   font-family: lemonMilk-normal;
 }
 #wf-col{
   font-size:  large;
+  text-align: center;
+
+}
+#wf-col-1 {
+  font-size: large;
+  margin-left: 2.5em;
 }
 
 
