@@ -6,6 +6,12 @@ import Workflow from './components/Workflow'
 import Work from './components/Work'
 import Contact from './components/Contact'
 import About from './components/About'
+
+import { connect } from 'react-redux';
+
+import { getToken } from './actions/loginActions';
+import { getUser } from './actions/userActions';
+
 // import Container from 'react-bootstrap/Container'
 // import Col from 'react-bootstrap/Col'
 // import Row from 'react-bootstrap/Row'
@@ -14,6 +20,13 @@ import About from './components/About'
 // import GlassC from './media/GlassC.png'
 
 class App extends Component {
+
+
+  componentDidMount() {
+    this.props.getToken()
+    this.props.getUser()
+  }
+
   render(){
     return (
       <>
@@ -49,4 +62,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return 
+}
+
+export default connect(mapStateToProps, {getToken, getUser})(App);
