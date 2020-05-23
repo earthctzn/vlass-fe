@@ -1,6 +1,6 @@
 import React from "react";
 import GlassC from '../media/GlassC.png'
-import Col from 'react-bootstrap/Col'
+
 import Row from 'react-bootstrap/Row'
 
 export default function Home({ title, content, id }) {

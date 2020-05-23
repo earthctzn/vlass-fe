@@ -29,8 +29,10 @@ class App extends Component {
           id="about"
         />
         <Work
-          title="WORK"
           id="work"
+          title="WORK"
+          company="Facebook"
+          content="I showed them how to run their business."
         />
         <Workflow
           title="WORKFLOW"
@@ -42,36 +44,6 @@ class App extends Component {
           content="VINCENT@VLASS.CO"
           id="contact"
         />
-
-        {/* <Container id="home" fluid="md">
-          <h2>BREAKING THE GLASS CEILING TO UNLOCK YOUR POTENTIAL</h2>
-          <img src={GlassC}  id="glass-c"></img>
-        </Container>
-        <Container id="about" fluid="md">
-          <h1>What We Do</h1>
-        </Container>
-        <Container id="work" fluid="md">
-          <h1>Work</h1>
-        </Container>
-        <Container id="workflow" fluid="md">
-          <h1 id="wfheader">Workflow</h1>
-          <br></br>
-          <h2>These are our steps to make sure we deliver results</h2>
-          <img id="wflow" src={wflow} alt="workflow graphic"/>
-          <Container id="wflow-steps" >
-            <Row className="flow">
-              <Col md="auto">Research</Col>
-              <Col md="2">Product Design</Col>
-              <Col md="auto">Development</Col>
-              <Col md="2">Delivery</Col>
-              <Col md="2">Marketing</Col>
-              <Col md="auto">Results</Col>
-            </Row>
-          </Container>
-        </Container>
-        <Container id="contact" fluid="md">
-          <h1>Contact</h1>
-        </Container> */}
       </>
     );
   }
