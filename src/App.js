@@ -32,7 +32,7 @@ class App extends Component {
           id="work"
           title="WORK"
           company="Facebook"
-          content="I showed them how to run their business."
+          job="I showed them how to run their business."
         />
         <Workflow
           title="WORKFLOW"

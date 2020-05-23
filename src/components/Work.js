@@ -6,7 +6,7 @@ class Work extends Component {
    return (
       <div>
         <h2>{this.props.company}</h2>
-        <p>{this.props.content}</p>
+        <p>{this.props.job}</p>
       </div>
     ) 
   }
