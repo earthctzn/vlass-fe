@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-// import Navbar from 'react-bootstrap/Navbar'
-// import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-scroll"
 
 class NavBar extends Component {
@@ -76,18 +74,6 @@ class NavBar extends Component {
                     </ul>
                 </div>
             </nav>
-        //     <Navbar fixed="top" collapseOnSelect expanded="false" bg="light" variant="light">
-        //     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        //     <Navbar.Collapse id="responsive-navbar-nav">
-        //         <Nav className="nav-links">
-        //             <Nav.Link href="/about">What We Do</Nav.Link>
-        //             <Nav.Link href="/work">Work</Nav.Link>
-        //             <Nav.Link href="/workflow">Workflow</Nav.Link>
-        //             <Nav.Link href="/contact">Contact</Nav.Link>
-        //         </Nav>
-        //     </Navbar.Collapse>
-
-        //   </Navbar>
 
         )
     }

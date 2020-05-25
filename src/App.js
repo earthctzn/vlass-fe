@@ -9,15 +9,9 @@ import About from './components/About'
 
 import { connect } from 'react-redux';
 
-import { getToken } from './actions/loginActions';
+import { getToken } from './actions/tokenActions';
 import { getUser } from './actions/userActions';
 
-// import Container from 'react-bootstrap/Container'
-// import Col from 'react-bootstrap/Col'
-// import Row from 'react-bootstrap/Row'
-// import wflow from './media/WorkflowGraphic.png'
-
-// import GlassC from './media/GlassC.png'
 
 class App extends Component {
 
@@ -31,6 +25,7 @@ class App extends Component {
     return (
       <>
         <NavBar/>
+     
         <Home
           title="VLASS"
           content="BREAKING THE GLASS CEILING TO UNLOCK YOUR POTENTIAL"
@@ -62,8 +57,5 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return 
-}
 
-export default connect(mapStateToProps, {getToken, getUser})(App);
+export default connect(null, {getToken, getUser})(App);

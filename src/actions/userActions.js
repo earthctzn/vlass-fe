@@ -1,4 +1,4 @@
-import { getToken } from './loginActions'
+import { getToken } from './tokenActions'
 
 //State altering actions
 export function setUser(userObj){

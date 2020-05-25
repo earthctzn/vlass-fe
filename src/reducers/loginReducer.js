@@ -1,15 +1,15 @@
-export default function loginReducer(state= {user: null, formErrors: [], loggedIn: false}, action) {
+export default function loginReducer(state= {admin: null, formErrors: [], loggedIn: false}, action) {
     switch(action.type) {
         case "SET_USER":
             return {
                   ...state,
-                  user: action.payload,
+                  admin: action.payload,
                   loggedIn: true
                 }
         case "CLEAR_USER":
             return {
                 ...state,
-                user: null,
+                admin: null,
                 loggedIn: false
             }
         case "ADD_ERRORS":
