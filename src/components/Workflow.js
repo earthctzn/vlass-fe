@@ -1,7 +1,5 @@
 import React from "react";
 import Flow from '../media/WorkflowGraphic.png'
-
-import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
