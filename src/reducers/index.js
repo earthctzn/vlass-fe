@@ -10,12 +10,12 @@ import contactReducer from './contactReducer'
 
 const rootReducer = combineReducers({
     user: loginReducer,
-    token: tokenReducer,
     home: homeReducer,
     about: aboutReducer,
     work: workReducer,
     workflow: workflowReducer,
-    contact: contactReducer
+    contact: contactReducer,
+    token: tokenReducer
 })
 
 export default rootReducer
