@@ -16,16 +16,16 @@ export default function Workflow({ title, content, id }) {
           <p>{content}</p>
         </div>
         <img src={Flow} id="wflow" alt="workflow graphic"></img>
-        <Container id="wflow-steps">
-            <Row className="flow">
-              <Col id="wf-col" md="auto" >RESEARCH</Col>
-              <Col id="wf-col" md="2">PRODUCT DESIGN</Col>
-              <Col id="wf-col" md="auto">DEVELOPMENT</Col>
-              <Col id="wf-col" md="2">DELIVERY</Col>
-              <Col id="wf-col" md="auto">MARKETING</Col>
-              <Col id="wf-col-1" md="2">RESULTS</Col>
-            </Row>
-          </Container>
+      
+        <Row className="flow">
+          <Col id="wf-col" md="auto" >RESEARCH</Col>
+          <Col id="wf-col" md="2">PRODUCT DESIGN</Col>
+          <Col id="wf-col" md="auto">DEVELOPMENT</Col>
+          <Col id="wf-col" md="2">DELIVERY</Col>
+          <Col id="wf-col" md="auto">MARKETING</Col>
+          <Col id="wf-col" md="auto">RESULTS</Col>
+        </Row>
+          
       </div>
     </div>
   );

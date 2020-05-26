@@ -1,49 +1,4 @@
-@font-face {
-  font-family: lemonMilk-bold;
-  src: url(/media/fonts/LEMONMILK-Bold.otf);
-  font-weight: bold;
-}
-@font-face {
-  font-family: lemonMilk-boldItalic;
-  src: url(/media/fonts/LEMONMILK-BoldItalic.otf);
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: lemonMilk-light;
-  src: url(/media/fonts/LEMONMILK-Light.otf);
-  font-weight: lighter;
 
-}
-@font-face {
-  font-family: lemonMilk-lightItalic;
-  src: url(/media/fonts/LEMONMILK-LightItalic.otf);
-  font-weight: lighter;
-  font-style: italic;
-}
-@font-face {
-  font-family: lemonMilk-medium;
-  src: url(/media/fonts/LEMONMILK-Medium.otf);
-  font-weight: normal;
-}
-@font-face {
-  font-family: lemonMilk-mediumItalic;
-  src: url(/media/fonts/LEMONMILK-MediumItalic.otf);
-  font-weight: bolder;
-  font-stye: italic;
-}
-
-@font-face {
-  font-family: lemonMilk-regular;
-  src: url(/media/fonts/LEMONMILK-Regular.otf);
-  font-weight: normal;
-}
-@font-face {
-  font-family: lemonMilk-regularItalic;
-  src: url(/media/fonts/LEMONMILK-RegularItalic.otf);
-  font-weight: normal;
-  font-style: italic;
-}
 
 
 .App {
@@ -52,6 +7,10 @@
 }
 .body{
   font-family: lemonMilk-normal;
+}
+#logo{
+  margin-bottom: 3em;
+  height: 55px;
 }
 
 .nav {
@@ -145,20 +104,61 @@ h1 {
 #wflow{
   display: flex;
   width: auto;
-  height: 230px;
+  height: 220px;
   align-items: center;
 }
-/* #wflow-steps {
-  margin-left:  15px;
-} */
-#glass-c{
+@media only screen and (max-width: 2560px) {
+  #glass-c{
+    margin-top: 40px;
+    height: 800px;
+    width: 1024px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #about-content {
+    max-width: 1024px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: lemonMilk-normal;
+  }
+}
+@media only screen and (max-width: 1920px) {
+  #glass-c{
+    margin-top: 40px;
+    height: 640px;
+    width: 900px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #about-content {
+    max-width: 1024px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: lemonMilk-normal;
+  }
+}
+@media only screen and (max-width: 1440px) {
+
+  #glass-c{
+    margin-top: 40px;
+    height: 600px;
+    width: 750px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+}
+/* #glass-c{
   margin-top: 40px;
-  height: 400px;
-  width: 600px;
+  height: 640px;
+  width: 900px;
   border-radius: 1em;
   align-self: center;
   box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
-}
+} */
+
 
 #welcome, #work, #contact {
   background-image: url('./media/WebPageBackground.jpg');
@@ -168,9 +168,8 @@ h1 {
   font-family: lemonMilk-Bold;
 }
 .flow{
-  margin-left: auto;
-  align-items: start;
-  font-size: medium-large;
+  align-items: flex-start;
+  font-size: large;
   font-family: lemonMilk-normal;
 }
 #wf-col{
@@ -178,10 +177,7 @@ h1 {
   text-align: center;
 
 }
-#wf-col-1 {
-  font-size: large;
-  margin-left: 2.5em;
-}
+
 .error-card {
   background-color: rgba(248, 243, 243, 0.4);
   color: darkred;
