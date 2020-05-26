@@ -195,6 +195,20 @@ h1 {
 #home-p{
   text-align: center;
 }
+
+.signup-card{
+  background-color: rgba(248, 243, 243, 0.4);
+  color: darkred;
+  width: 250px;
+  display: inline-block;
+  display: inline-table;
+  padding: 10px;
+  margin: 10px;
+  border-radius: .3in;
+  border-style: solid;
+  border-color: black;
+}
+
 .login-card {
   background-color: rgba(248, 243, 243, 0.4);
   color: darkred;

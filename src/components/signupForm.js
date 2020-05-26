@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-
-import { ErrorComponent } from './ErrorComponent'
+import { ErrorComponent } from './ErrorComponent';
 import { Redirect } from 'react-router-dom'
-import { clearErrors } from '../actions/userActions'
+import { setErrors, setUser, clearErrors, signupUser} from '../actions/userActions'
 
 
-class LoginInput extends Component {
+
+class SignupInput extends Component {
+
     constructor(props) {
         super(props)
             this.state = {
-            email: '',
+            username: '',
             password: '',
+            password_confirmation: '',
             shouldRedirect: false
         }
     }
 
+
     componentDidUpdate(prevProps) {
-        
         if(this.props.user && !prevProps.user) {
            this.setState({
                shouldRedirect: true
@@ -26,8 +28,8 @@ class LoginInput extends Component {
     }
 
     renderErrors = () => {
-        return this.props.errors.map(error => <ErrorComponent key={error} error={error} />)
-     } 
+       return this.props.errors.map(error => <ErrorComponent key={error} error={error} />)
+    } 
 
     handleInputChange = event => {
         this.setState({
@@ -37,14 +39,16 @@ class LoginInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        this.props.handleSubmit(this.props.token, this.state)
+        this.props.signupUser(this.props.token, this.state)
         this.setState({
-            email: '',
-            password: ''
+            username: '',
+            password: '',
+            password_confirmation: ''
         })
         this.props.clearErrors()
-             
     }
+
+
 
     render() {
         return this.state.shouldRedirect ? 
@@ -52,18 +56,18 @@ class LoginInput extends Component {
          : 
          (
             <>
-                <div className="login-card" >
-                    <h3>Login To See all breweries!</h3>
+                <div className="lgin-card" >
+                    <h3>Signup below:</h3>
                     <form onSubmit={this.handleOnSubmit}>
                         <input
-                            id='email'
+                            id='username'
                             type="text" 
-                            placeholder="email"
-                            value={this.state.email}
+                            placeholder="username"
+                            value={this.state.username}
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <input
+                        <input 
                             id="password"
                             type="password" 
                             placeholder="password"
@@ -71,24 +75,35 @@ class LoginInput extends Component {
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button type="submit" > Log In </button>
+                        <input
+                            id="password_confirmation"
+                            type="password" 
+                            placeholder="password confirmation"
+                            value={this.state.password_confirmation}
+                            onChange={e => this.handleInputChange(e)}
+                        >
+                        </input>
+                        <button type="submit"> Sign Up </button>
                     </form>
                 </div>
                 <div>
-                    {this.renderErrors()}  
+                  {this.renderErrors()}  
                 </div>
+                
             </>
         )
     }
 }
 
+
+
 const mapStateToProps = state => {
     return {
-        token: state.token,
+        errors: state.user.formErrors,
         user: state.user.admin,
-        errors: state.user.formErrors
+        token: state.token
     }
-}
-export default connect(mapStateToProps, {clearErrors})(LoginInput)
+} 
 
 
+export default connect(mapStateToProps, { setUser, setErrors, clearErrors, signupUser })(SignupInput)

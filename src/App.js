@@ -6,12 +6,19 @@ import Workflow from './components/Workflow'
 import Work from './components/Work'
 import Contact from './components/Contact'
 import About from './components/About'
+import SignupForm from './components/signupForm'
 
 import { connect } from 'react-redux';
 
 import { getToken } from './actions/tokenActions';
 import { getUser } from './actions/userActions';
 
+import { 
+  BrowserRouter as Router, 
+  Switch, 
+  Route
+} from 'react-router-dom';
+import LoginForm from './components/loginForm';
 
 class App extends Component {
 
@@ -24,7 +31,14 @@ class App extends Component {
   render(){
     return (
       <>
-        <NavBar/>
+        <Router>
+          <NavBar/>
+            <Switch>
+              <Route exact path="/boss">
+                <SignupForm />
+              </Route>
+            </Switch>
+        </Router>
      
         <Home
           title="VLASS"
@@ -57,5 +71,8 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return 
+}
 
-export default connect(null, {getToken, getUser})(App);
+export default connect(mapStateToProps, {getToken, getUser})(App);

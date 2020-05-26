@@ -52,6 +52,43 @@ export const getUser = () => {
     }
 }
 
+// Signup the user
+export const signupUser = (token, user) => {
+    return async function (dispatch) {
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json')
+        headers.append('Accepts', 'application/json')
+        headers.append('X-CSRF-Token', token)
+
+        
+        const formData = {user: {
+            username: user.username,
+            password: user.password,
+            password_confirmation: user.password_confirmation 
+        }};
+
+        const options = {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(formData),
+            credentials: 'include'
+        };
+        
+        try{
+            const response = await fetch('http://localhost:3000/api/v1/signup', options)
+            const dataObj = await response.json();
+            if (dataObj.errors){
+                dispatch(setErrors(dataObj))
+            }else{
+                dispatch(setUser(dataObj))
+            }
+        } catch(data) {
+            console.log(data)
+        };
+    }
+    
+};
+
 // Logout user and get a fresh token
 export const logOutUser = (token) => {
     return async function (dispatch) {
