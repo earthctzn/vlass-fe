@@ -10,7 +10,7 @@ class LoginInput extends Component {
     constructor(props) {
         super(props)
             this.state = {
-            email: '',
+            username: '',
             password: '',
             shouldRedirect: false
         }
@@ -39,7 +39,7 @@ class LoginInput extends Component {
         event.preventDefault()
         this.props.handleSubmit(this.props.token, this.state)
         this.setState({
-            email: '',
+            username: '',
             password: ''
         })
         this.props.clearErrors()
@@ -53,13 +53,13 @@ class LoginInput extends Component {
          (
             <>
                 <div className="login-card" >
-                    <h3>Login To See all breweries!</h3>
+                    <h3>Login to edit the site.</h3>
                     <form onSubmit={this.handleOnSubmit}>
                         <input
-                            id='email'
+                            id='username'
                             type="text" 
-                            placeholder="email"
-                            value={this.state.email}
+                            placeholder="username"
+                            value={this.state.username}
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>

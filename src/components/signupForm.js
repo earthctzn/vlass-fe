@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { ErrorComponent } from './ErrorComponent';
 import { Redirect } from 'react-router-dom'
-import { setErrors, setUser, clearErrors, signupUser} from '../actions/userActions'
+import { setErrors, setUser, clearErrors} from '../actions/userActions'
 
 
 
@@ -39,7 +39,8 @@ class SignupInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        this.props.signupUser(this.props.token, this.state)
+        console.log(this.props.token)
+        this.signupUser(this.props.token, this.state)
         this.setState({
             username: '',
             password: '',
@@ -47,8 +48,40 @@ class SignupInput extends Component {
         })
         this.props.clearErrors()
     }
-
-
+    
+    signupUser =  async (token, user) => {
+   
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json')
+        headers.append('Accepts', 'application/json')
+        headers.append('X-CSRF-Token', token)
+    
+        const formData = {user: {
+            username: user.username,
+            password: user.password,
+            password_confirmation: user.password_confirmation 
+        }};
+    
+        const options = {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(formData),
+            credentials: 'include'
+        };
+    
+        try{
+            const response = await fetch('http://localhost:3000/api/v1/signup', options)
+            const dataObj = await response.json();
+            if (dataObj.errors){
+                this.props.setErrors(dataObj)
+            }else{
+                this.props.setUser(dataObj)
+            }
+        } catch(data) {
+            console.log(data)
+        };
+        
+    };
 
     render() {
         return this.state.shouldRedirect ? 
@@ -106,4 +139,4 @@ const mapStateToProps = state => {
 } 
 
 
-export default connect(mapStateToProps, { setUser, setErrors, clearErrors, signupUser })(SignupInput)
+export default connect(mapStateToProps, { setUser, setErrors, clearErrors })(SignupInput)

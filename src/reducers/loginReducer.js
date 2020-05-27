@@ -13,7 +13,7 @@ export default function loginReducer(state= {admin: null, formErrors: [], logged
                 loggedIn: false
             }
         case "ADD_ERRORS":
-             let errors = action.payload.errors.map(err => {
+            let errors = action.payload.errors.map(err => {
                 return  err
             })
             return {
