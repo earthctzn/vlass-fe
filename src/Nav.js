@@ -7,27 +7,29 @@ class NavBar extends Component {
 
     handleClick = () => {
         this.props.logOutUser( this.props.token )
-    }
+    };
  
     renderUser  = () => {
-        if (this.props.isLoggedIn === true)
+        if (this.props.isLoggedIn === true){
             return (
                 <>
-                <li className="nav-item">
-                    Hi {this.props.user.username}
-                    
-                </li>
-                <button onClick={this.handleClick}>logout</button>
+                    <li className="nav-item">
+                        Hi {this.props.user.username}
+                        
+                    </li>
+                    <button onClick={this.handleClick}>
+                        logout
+                    </button>
                </> 
             )
         }
-    
+    };
+
     render(){
         return(
             <nav className="nav" id="navbar">
                 <div className="nav-content">
                     <ul className="nav-items">
-                        
                         <li className="nav-item">
                             <Link
                                 activeClass="active"
@@ -90,15 +92,15 @@ class NavBar extends Component {
                                 CONTACT
                             </Link>
                         </li>
+
                         {this.renderUser()}
-                    </ul>
-                    
+
+                    </ul> 
                 </div>
             </nav>
-
         )
     }
-}
+};
 
 const mapStateToProps = state => {
     return { 
@@ -106,6 +108,6 @@ const mapStateToProps = state => {
         isLoggedIn: state.user.loggedIn,
         token: state.token
     }
-}
+};
 
-export default connect(mapStateToProps, {logOutUser})(NavBar)
+export default connect(mapStateToProps, {logOutUser})(NavBar);
