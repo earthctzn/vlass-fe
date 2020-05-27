@@ -1,14 +1,33 @@
 import React, { Component } from "react"
 import { Link } from "react-scroll"
+import { connect } from 'react-redux'
+import { logOutUser } from './actions/userActions'
 
 class NavBar extends Component {
+
+    handleClick = () => {
+        this.props.logOutUser( this.props.token )
+    }
  
+    renderUser  = () => {
+        if (this.props.isLoggedIn === true)
+            return (
+                <>
+                <li className="nav-item">
+                    Hi {this.props.user.username}
+                    
+                </li>
+                <button onClick={this.handleClick}>logout</button>
+               </> 
+            )
+        }
     
     render(){
         return(
             <nav className="nav" id="navbar">
                 <div className="nav-content">
                     <ul className="nav-items">
+                        
                         <li className="nav-item">
                             <Link
                                 activeClass="active"
@@ -69,9 +88,11 @@ class NavBar extends Component {
                                 duration= {700}
                             >
                                 CONTACT
-                            </Link> 
+                            </Link>
                         </li>
+                        {this.renderUser()}
                     </ul>
+                    
                 </div>
             </nav>
 
@@ -79,4 +100,12 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar
+const mapStateToProps = state => {
+    return { 
+        user: state.user.admin,
+        isLoggedIn: state.user.loggedIn,
+        token: state.token
+    }
+}
+
+export default connect(mapStateToProps, {logOutUser})(NavBar)
