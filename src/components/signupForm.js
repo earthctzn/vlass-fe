@@ -50,11 +50,12 @@ class SignupInput extends Component {
          (<Redirect to="/home" /> ) 
          : 
          (
-            <>
-                <div className="lgin-card" >
+            <div className="signup">
+                <div className="signup-card" >
                     <h3>Signup below:</h3>
-                    <form onSubmit={this.handleOnSubmit}>
+                    <form className="signup-form" onSubmit={this.handleOnSubmit}>
                         <input
+                            className='signup-input'
                             id='username'
                             type="text" 
                             placeholder="username"
@@ -62,8 +63,9 @@ class SignupInput extends Component {
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <input 
-                            id="password"
+                        <input
+                            className='signup-input'
+                            id='password'
                             type="password" 
                             placeholder="password"
                             value={this.state.password}
@@ -71,21 +73,22 @@ class SignupInput extends Component {
                         >
                         </input>
                         <input
-                            id="password_confirmation"
+                            className='signup-input'
+                            id='password_confirmation'
                             type="password" 
                             placeholder="password confirmation"
                             value={this.state.password_confirmation}
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button type="submit"> Sign Up </button>
+                        <button id="signup-button" type="submit"> Submit </button>
                     </form>
                 </div>
                 <div>
                   {this.renderErrors()}  
                 </div>
                 
-            </>
+            </div>
         )
     }
 }

@@ -34,8 +34,11 @@ class App extends Component {
         <Router>
           <NavBar/>
             <Switch>
-              <Route exact path="/boss">
+              <Route exact path="/newness">
                 <SignupForm />
+              </Route>
+              <Route exact path="/boss">
+                <LoginForm />
               </Route>
             </Switch>
         </Router>

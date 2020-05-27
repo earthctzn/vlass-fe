@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-
 import { ErrorComponent } from './ErrorComponent'
 import { Redirect } from 'react-router-dom'
 import { clearErrors } from '../actions/userActions'
@@ -51,11 +50,12 @@ class LoginInput extends Component {
          (<Redirect to="/home" /> ) 
          : 
          (
-            <>
+            <div className="signup">
                 <div className="login-card" >
-                    <h3>Login to edit the site.</h3>
+                    <h3>Login to edit site.</h3>
                     <form onSubmit={this.handleOnSubmit}>
                         <input
+                            className="login-input"
                             id='username'
                             type="text" 
                             placeholder="username"
@@ -64,6 +64,7 @@ class LoginInput extends Component {
                         >
                         </input>
                         <input
+                            className="login-input"
                             id="password"
                             type="password" 
                             placeholder="password"
@@ -71,13 +72,13 @@ class LoginInput extends Component {
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button type="submit" > Log In </button>
+                        <button id="login-button" type="submit" > Log In </button>
                     </form>
                 </div>
                 <div>
                     {this.renderErrors()}  
                 </div>
-            </>
+            </div>
         )
     }
 }

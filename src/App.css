@@ -196,31 +196,38 @@ h1 {
   text-align: center;
 }
 
-.signup-card{
-  background-color: rgba(248, 243, 243, 0.4);
-  color: darkred;
-  width: 250px;
-  display: inline-block;
-  display: inline-table;
-  padding: 10px;
-  margin: 10px;
-  border-radius: .3in;
-  border-style: solid;
-  border-color: black;
+.signup{
+  display: flex;
+  justify-content: center;
 }
 
-.login-card {
-  background-color: rgba(248, 243, 243, 0.4);
+.signup-card, .login-card{
+  background-color: rgba(155, 146, 146, 0.5);
   color: darkred;
   width: 250px;
   display: inline-block;
   display: inline-table;
   padding: 10px;
+  text-align: center;
   margin: 10px;
   border-radius: .3in;
   border-style: solid;
   border-color: black;
 }
+.signup-input, .login-input{
+  text-align: center;
+  width: 200px;
+  border-radius: .2in;
+  background-color: seashell;
+}
+#signup-button, #login-button{
+  text-align: center;
+  width: 80px;
+  border-radius: .2in;
+  background-color: seashell;
+}
+
+
 
 /* #glass-c{
   margin-top: 40px;
