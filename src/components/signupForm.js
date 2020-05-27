@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { ErrorComponent } from './ErrorComponent';
 import { Redirect } from 'react-router-dom'
-import { setErrors, setUser, clearErrors, signupUser} from '../actions/userActions'
+import { clearErrors, signupUser} from '../actions/userActions'
 
 class SignupInput extends Component {
 
@@ -75,19 +75,20 @@ class SignupInput extends Component {
                         <input
                             className='signup-input'
                             id='password_confirmation'
-                            type="password" 
+                            type="password_confirmation" 
                             placeholder="password confirmation"
                             value={this.state.password_confirmation}
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button id="signup-button" type="submit"> Submit </button>
+                        <button id="signup-button" type="submit"> 
+                            Submit 
+                        </button>
                     </form>
+                    <div>
+                        {this.renderErrors()}  
+                    </div>
                 </div>
-                <div>
-                  {this.renderErrors()}  
-                </div>
-                
             </div>
         )
     }
@@ -101,4 +102,4 @@ const mapStateToProps = state => {
     }
 } 
 
-export default connect(mapStateToProps, { signupUser, setUser, setErrors, clearErrors })(SignupInput)
+export default connect(mapStateToProps, { signupUser, clearErrors })(SignupInput)

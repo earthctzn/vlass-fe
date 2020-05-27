@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { ErrorComponent } from './ErrorComponent'
 import { Redirect } from 'react-router-dom'
 import { clearErrors } from '../actions/userActions'
+import { loginUser } from '../actions/loginActions'
 
 
 class LoginInput extends Component {
@@ -34,9 +35,9 @@ class LoginInput extends Component {
         })
     }
 
-    handleOnSubmit = event => {
+    handleOnSubmit = (event) => {
         event.preventDefault()
-        this.props.handleSubmit(this.props.token, this.state)
+        this.props.loginUser(this.props.token, this.state)
         this.setState({
             username: '',
             password: ''
@@ -74,10 +75,11 @@ class LoginInput extends Component {
                         </input>
                         <button id="login-button" type="submit" > Log In </button>
                     </form>
+                    <div>
+                        {this.renderErrors()}  
+                    </div>
                 </div>
-                <div>
-                    {this.renderErrors()}  
-                </div>
+         
             </div>
         )
     }
@@ -90,6 +92,6 @@ const mapStateToProps = state => {
         errors: state.user.formErrors
     }
 }
-export default connect(mapStateToProps, {clearErrors})(LoginInput)
+export default connect(mapStateToProps, {loginUser, clearErrors})(LoginInput)
 
 
