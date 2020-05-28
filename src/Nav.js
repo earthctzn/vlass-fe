@@ -16,7 +16,7 @@ class NavBar extends Component {
                     <li className="nav-item">
                         Hi {this.props.user.username}
                     </li>
-                    <button onClick={this.handleClick}>
+                    <button id="logout-button" onClick={this.handleClick}>
                         logout
                     </button>
                </> 
