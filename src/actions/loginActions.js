@@ -4,7 +4,7 @@ export const loginUser = (csrf_token, user) => {
     return async function (dispatch) {
         try{
             const formData = { user: {
-                email: user.email,
+                username: user.username,
                 password: user.password
             }};
             const response = await fetch('http://localhost:3000/api/v1/login',{
