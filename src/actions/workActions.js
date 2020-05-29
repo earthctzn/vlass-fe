@@ -3,8 +3,8 @@ const setWorkContent = ( workContent ) => {
     return { type: "SET_WORK_CONTENT", payload: workContent }
 }
 
-const loadingWork = (workData) => {
-    return { type: "LOADING_WORK_CONTENT", payload: workData}
+const loadingWork = () => {
+    return { type: "LOADING_WORK"}
 }
 
 

@@ -3,18 +3,14 @@ export default function workReducer(state= {workArr: [], loading: false}, action
         case "LOADING_WORK":
         return {
             ...state,
-            breweriesArr: [...state.breweriesArr],
+            workArr: [...state.workArr],
             loading: true
         }
-        case "SET_WORK_TITLE":
-            return {
-                  ...state,
-                  title: action.payload
-                }
         case "SET_WORK_CONTENT":
             return {
                 ...state,
-                content: action.payload
+                workArr: action.payload,
+                loading: false
             }
       
         default:

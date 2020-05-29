@@ -38,7 +38,16 @@ class App extends Component {
     this.props.fetchContact()
   }
 
+  loading = () => {
+    if(this.props.work.loading) {
+      return (
+        <h1>Loading...</h1>
+      )
+    }
+  }
+
   render(){
+    this.loading()
     return (
       <>
         <Router>
