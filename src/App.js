@@ -75,7 +75,13 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  return 
+  return {
+    home: state.home,
+    about: state.about,
+    work: state.work,
+    workflow: state.workflow,
+    contact: state.contact
+  }
 }
 
 export default connect(mapStateToProps, {getToken, getUser})(App);
