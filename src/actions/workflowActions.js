@@ -21,8 +21,9 @@ export const fetchWorkflow = () => {
                     throw response
                 }
                 const workflowData = await response.json()
-                dispatch(setWorkflowTitle(workflowData))
-                dispatch(setWorkflowContent(workflowData))
+                console.log(workflowData)
+                dispatch(setWorkflowTitle(workflowData.title))
+                dispatch(setWorkflowContent(workflowData.content))
         }catch(data){
                 console.log(data)
         }

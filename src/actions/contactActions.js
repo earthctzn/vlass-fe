@@ -21,8 +21,8 @@ export const fetchContact = () => {
                     throw response
                 }
                 const contactData = await response.json()
-                dispatch(setContactTitle(contactData))
-                dispatch(setContactContent(contactData))
+                dispatch(setContactTitle(contactData.title))
+                dispatch(setContactContent(contactData.content))
         }catch(data){
                 console.log(data)
         }

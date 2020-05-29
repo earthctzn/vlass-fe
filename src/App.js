@@ -64,7 +64,7 @@ class App extends Component {
         />
         <Work
           id="work"
-          title={this.props.work.title}
+          title="WORK"
           company={this.props.work.company}
           job={this.props.work.job}
         />

@@ -1,6 +1,3 @@
-const setWorkTitle = ( workData ) => {
-    return { type: "SET_WORK_TITLE", payload: workData }
-}
 
 const setWorkContent = ( workContent ) => {
     return { type: "SET_WORK_CONTENT", payload: workContent }
@@ -21,7 +18,7 @@ export const fetchWork = () => {
                     throw response
                 }
                 const workData = await response.json()
-                dispatch(setWorkTitle(workData))
+                console.log(workData)
                 dispatch(setWorkContent(workData))
         }catch(data){
                 console.log(data)

@@ -1,5 +1,11 @@
-export default function workReducer(state= {title: null, content: []}, action) {
+export default function workReducer(state= {workArr: [], loading: false}, action) {
     switch(action.type) {
+        case "LOADING_WORK":
+        return {
+            ...state,
+            breweriesArr: [...state.breweriesArr],
+            loading: true
+        }
         case "SET_WORK_TITLE":
             return {
                   ...state,

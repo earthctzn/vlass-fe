@@ -6,23 +6,24 @@ const setAboutContent = ( abtContent ) => {
     return { type: "SET_ABOUT_CONTENT", payload: abtContent }
 }
 
-const loadingAbout = (abtData) => {
-    return { type: "LOADING_ABOUT", payload: abtData}
-}
+// const loadingAbout = (abtData) => {
+//     return { type: "LOADING_ABOUT", payload: abtData}
+// }
 
 
 export const fetchAbout = () => {
 
     return async dispatch => {
         try {
-            dispatch(loadingAbout())
+            // dispatch(loadingAbout())
                 const response = await fetch('http://localhost:3000/api/v1/about', {credentials: 'include'})
                 if (!response.ok) {
                     throw response
                 }
                 const abtData = await response.json()
-                dispatch(setAboutTitle(abtData))
-                dispatch(setAboutContent(abtData))
+                console.log(abtData)
+                dispatch(setAboutTitle(abtData.title))
+                dispatch(setAboutContent(abtData.content))
         }catch(data){
                 console.log(data)
         }
