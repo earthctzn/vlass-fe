@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 import './App.css';
 import NavBar from './Nav'
 import Home from './components/Home'
@@ -8,17 +8,22 @@ import Contact from './components/Contact'
 import About from './components/About'
 import SignupForm from './components/signupForm'
 
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
-import { getToken } from './actions/tokenActions';
-import { getUser } from './actions/userActions';
+import { getToken } from './actions/tokenActions'
+import { getUser } from './actions/userActions'
+import { fetchAbout } from './actions/aboutActions'
+import { fetchHome } from './actions/homeActions'
+import { fetchWork } from './actions/workActions'
+import { fetchWorkflow } from './actions/workflowActions'
+import { fetchContact } from './actions/contactActions'
 
 import { 
   BrowserRouter as Router, 
   Switch, 
   Route
 } from 'react-router-dom';
-import LoginForm from './components/loginForm';
+import LoginForm from './components/loginForm'
 
 class App extends Component {
 
@@ -26,6 +31,11 @@ class App extends Component {
   componentDidMount() {
     this.props.getToken()
     this.props.getUser()
+    this.props.fetchAbout()
+    this.props.fetchHome()
+    this.props.fetchWork()
+    this.props.fetchWorkflow()
+    this.props.fetchContact()
   }
 
   render(){
@@ -84,4 +94,13 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {getToken, getUser})(App);
+export default connect(
+  mapStateToProps, {
+    getToken, 
+    getUser, 
+    fetchAbout,
+    fetchHome,
+    fetchWork,
+    fetchWorkflow,
+    fetchContact
+  })(App);
