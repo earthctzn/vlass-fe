@@ -31,8 +31,8 @@ class App extends Component {
   componentDidMount() {
     this.props.getToken()
     this.props.getUser()
-    this.props.fetchAbout()
     this.props.fetchHome()
+    this.props.fetchAbout()
     this.props.fetchWork()
     this.props.fetchWorkflow()
     this.props.fetchContact()
@@ -54,29 +54,28 @@ class App extends Component {
         </Router>
      
         <Home
-          title="VLASS"
-          content="BREAKING THE GLASS CEILING TO UNLOCK YOUR POTENTIAL"
+          content={this.props.home.content}
           id="welcome"
         />
         <About
-          title="HELLO, WE ARE VLASS."
-          content="AT VLASS WE WORK ON TRANSFORMING YOUR BUSINESS THROUGH WEB DESIGN, CONTENT CREATION, GRAPHIC DESIGN AND MARKETING TO PREPARE YOUR BUSINESS FOR THE FUTURE."
+          title={this.props.about.title}
+          content={this.props.about.content}
           id="about"
         />
         <Work
           id="work"
-          title="WORK"
-          company="Facebook"
-          job="I showed them how to run their business."
+          title={this.props.work.title}
+          company={this.props.work.company}
+          job={this.props.work.job}
         />
         <Workflow
-          title="WORKFLOW"
-          content="THESE ARE OUR STEPS TO MAKE SURE WE DELIVER RESULTS"
+          title={this.props.workflow.title}
+          content={this.props.workflow.content}
           id="workflow"
         />
         <Contact
-          title="CONTACT"
-          content="VINCENT@VLASS.CO"
+          title={this.props.contact.title}
+          content={this.props.contact.content}
           id="contact"
         />
       </>
