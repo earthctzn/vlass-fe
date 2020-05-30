@@ -39,7 +39,12 @@ class App extends Component {
   }
 
   loading = () => {
-    if(this.props.work.loading) {
+    if( this.props.home.loading ||
+        this.props.about.loading ||
+        this.props.work.loading ||
+        this.props.workflow.loading ||
+        this.props.contact.loading
+      ) {
       return (
         <h1>Loading...</h1>
       )
@@ -63,26 +68,31 @@ class App extends Component {
         </Router>
      
         <Home
+          loading={this.loading()}
           content={this.props.home.content}
           id="welcome"
         />
         <About
+         loading={this.loading()}
           title={this.props.about.title}
           content={this.props.about.content}
           id="about"
         />
         <Work
+          loading={this.loading()}
           id="work"
           title="WORK"
           company={this.props.work.company}
           job={this.props.work.job}
         />
         <Workflow
+          loading={this.loading()}
           title={this.props.workflow.title}
           content={this.props.workflow.content}
           id="workflow"
         />
         <Contact
+          loading={this.loading()}
           title={this.props.contact.title}
           content={this.props.contact.content}
           id="contact"

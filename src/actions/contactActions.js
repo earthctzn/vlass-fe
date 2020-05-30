@@ -1,13 +1,9 @@
-const setContactTitle = ( contactData ) => {
-    return { type: "SET_CONTACT_TITLE", payload: contactData }
+const setContact = ( contactData ) => {
+    return { type: "SET_CONTACT", payload: contactData }
 }
 
-const setContactContent = ( contactContent ) => {
-    return { type: "SET_CONTACT_CONTENT", payload: contactContent }
-}
-
-const loadingContact = (contactData) => {
-    return { type: "LOADING_CONTACT_CONTENT", payload: contactData}
+const loadingContact = () => {
+    return { type: "LOADING_CONTACT"}
 }
 
 
@@ -21,8 +17,7 @@ export const fetchContact = () => {
                     throw response
                 }
                 const contactData = await response.json()
-                dispatch(setContactTitle(contactData.title))
-                dispatch(setContactContent(contactData.content))
+                dispatch(setContact(contactData))
         }catch(data){
                 console.log(data)
         }

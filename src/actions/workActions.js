@@ -18,7 +18,6 @@ export const fetchWork = () => {
                     throw response
                 }
                 const workData = await response.json()
-                console.log(workData)
                 dispatch(setWorkContent(workData))
         }catch(data){
                 console.log(data)

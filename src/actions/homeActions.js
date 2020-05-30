@@ -1,24 +1,23 @@
-const setHomeContent = ( homeContent ) => {
-    return { type: "SET_HOME_CONTENT", payload: homeContent }
+const setHomeContent = ( homeData ) => {
+    return { type: "SET_HOME", payload: homeData }
 }
 
-// const loadingHome = (homeData) => {
-//     return { type: "LOADING_HOME_CONTENT", payload: homeData}
-// }
+const loadingHome = () => {
+    return { type: "LOADING_HOME"}
+}
 
 
 export const fetchHome = () => {
 
     return async dispatch => {
         try {
-            // dispatch(loadingHome())
+            dispatch(loadingHome())
                 const response = await fetch('http://localhost:3000/api/v1/home', {credentials: 'include'})
                 if (!response.ok) {
                     throw response
                 }
                 const homeData = await response.json()
-                console.log(homeData[0].content)
-                dispatch(setHomeContent(homeData[0].content))
+                dispatch(setHomeContent(homeData))
         }catch(data){
                 console.log(data)
         }

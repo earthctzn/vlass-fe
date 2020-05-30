@@ -1,16 +1,18 @@
-export default function contactReducer(state= {title: null, content: null}, action) {
+export default function contactReducer(state= {id: null, title: null, content: null, loading: false}, action) {
     switch(action.type) {
-        case "SET_CONTACT_TITLE":
-            return {
-                  ...state,
-                  title: action.payload
-                }
-        case "SET_CONTACT_CONTENT":
+        case "LOADING_CONTACT":
             return {
                 ...state,
-                content: action.payload
+                loading: true
             }
-      
+        case "SET_CONTACT":
+            return {
+                  ...state,
+                  id: action.payload.id,
+                  title: action.payload.title,
+                  content: action.payload.content,
+                  loading: false
+                }
         default:
             return state
     }

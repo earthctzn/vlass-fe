@@ -4,12 +4,13 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
-export default function About({ title="Title text here.", content="Content Text here." }) {
+export default function About({ title, content, loading }) {
   return (
     <div className={"section"}>
       <Container className="section-content" id="about">
         <img src={wwd} id="wwd" alt="stock graphic"></img>
         <Container id="wwd-content" >
+            {loading}
             <Row className="abt">
               <Col id="wwd-col" md="auto" >WEB DESIGN</Col>
               <Col id="wwd-col" md="auto">CONTENT CREATION</Col>

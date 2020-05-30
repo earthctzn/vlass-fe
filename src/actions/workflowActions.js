@@ -1,13 +1,10 @@
-const setWorkflowTitle = ( workflowData ) => {
-    return { type: "SET_WORKFLOW_TITLE", payload: workflowData }
+const setWorkflow = ( workflowData ) => {
+    return { type: "SET_WORKFLOW", payload: workflowData }
 }
 
-const setWorkflowContent = ( workflowContent ) => {
-    return { type: "SET_WORKFLOW_CONTENT", payload: workflowContent }
-}
 
-const loadingWorkflow = (workflowData) => {
-    return { type: "LOADING_WORKFLOW_CONTENT", payload: workflowData}
+const loadingWorkflow = () => {
+    return { type: "LOADING_WORKFLOW" }
 }
 
 
@@ -21,9 +18,7 @@ export const fetchWorkflow = () => {
                     throw response
                 }
                 const workflowData = await response.json()
-                console.log(workflowData)
-                dispatch(setWorkflowTitle(workflowData.title))
-                dispatch(setWorkflowContent(workflowData.content))
+                dispatch(setWorkflow(workflowData))
         }catch(data){
                 console.log(data)
         }

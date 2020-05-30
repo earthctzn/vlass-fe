@@ -1,16 +1,12 @@
-export default function aboutReducer(state= {title: null, content: null}, action) {
+export default function aboutReducer(state= {id: null, title: null, content: null}, action) {
     switch(action.type) {
-        case "SET_ABOUT_TITLE":
+        case "SET_ABOUT":
             return {
                   ...state,
-                  title: action.payload
+                  id: action.payload.id,
+                  title: action.payload.title,
+                  content: action.payload.content
                 }
-        case "SET_ABOUT_CONTENT":
-            return {
-                ...state,
-                content: action.payload
-            }
-      
         default:
             return state
     }

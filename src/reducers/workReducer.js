@@ -3,7 +3,6 @@ export default function workReducer(state= {workArr: [], loading: false}, action
         case "LOADING_WORK":
         return {
             ...state,
-            workArr: [...state.workArr],
             loading: true
         }
         case "SET_WORK_CONTENT":

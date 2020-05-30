@@ -1,16 +1,17 @@
 export default function workflowReducer(state= {title: null, content: null}, action) {
     switch(action.type) {
-        case "SET_WORKFLOW_TITLE":
-            return {
-                  ...state,
-                  title: action.payload
-                }
-        case "SET_WORKFLOW_CONTENT":
+        case "LOADING_WORKFLOW":
             return {
                 ...state,
-                content: action.payload
+                loading: true
             }
-      
+        case "SET_WORKFLOW":
+            return {
+                  ...state,
+                  title: action.payload.title,
+                  content: action.payload.content,
+                  loading: false
+            }
         default:
             return state
     }

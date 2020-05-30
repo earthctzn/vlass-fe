@@ -1,15 +1,15 @@
-export default function homeReducer(state= {content: '', loading: false}, action) {
+export default function homeReducer(state= {id: null, content: null, loading: false}, action) {
     switch(action.type) {
-        case "LOADING_CONTENT":
+        case "LOADING_HOME":
             return {
                 ...state,
-                content: action.payload,
                 loading: true
             }
-        case "SET_HOME_CONTENT":
+        case "SET_HOME":
             return {
                 ...state,
-                content: action.payload,
+                id: action.payload.id,
+                content: action.payload.content,
                 loading: false
             }
       
