@@ -74,12 +74,19 @@
 p{
   font-family: lemonMilk-regular;
 }
-
+#contact-bar {
+  background-color: black;
+  height: 5px;
+  width: 200px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
 h1 {
   align-self: center;
   font-family: lemonMilk-regular;
   font-size: 70px;
+  margin-bottom: 0;
 }
 #wwd{
   height: 95px;
@@ -209,6 +216,10 @@ h1 {
 .signup{
   display: flex;
   justify-content: center;
+}
+
+#contact-h2 {
+  font-family: lemonMilk-light;
 }
 
 .signup-card, .login-card{
