@@ -8,7 +8,7 @@ class Work extends Component {
       return (
         <div key={work.id}>
           <h2>{work.company}</h2>
-          <p>{work.job}</p>
+          <p id="jobs">{work.job}</p>
         </div>
       ) 
     })
@@ -21,7 +21,9 @@ class Work extends Component {
         <div className="section-content" id={this.props.id}>
           <h1>{this.props.title}</h1>
           {this.props.loading}
-          {this.renderWork(this.props)}
+          <div id="work-content">
+            {this.renderWork(this.props)}
+          </div>
         </div>
       </div>
     );

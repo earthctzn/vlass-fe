@@ -56,11 +56,20 @@
   font-size: calc(10px + 2vmin);
   color: black;
 }
+#work-content {
+  margin: 3em;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 300px;
+}
 #about-content {
   max-width: 600px;
   text-align: center;
   overflow-wrap: break-word;
   font-family: lemonMilk-regular;
+}
+#jobs{
+  font-family: lemonMilk-light;
 }
 p{
   font-family: lemonMilk-regular;
