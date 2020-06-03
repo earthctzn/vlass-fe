@@ -11,14 +11,13 @@ class LoginInput extends Component {
         super(props)
             this.state = {
             username: '',
-            password: '',
-            shouldRedirect: false
+            password: ''
         }
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate() {
         
-        if(this.props.user && !prevProps.user) {
+        if(this.props.isLoggedIn === true) {
            this.setState({
                shouldRedirect: true
            })
@@ -88,7 +87,7 @@ class LoginInput extends Component {
 const mapStateToProps = state => {
     return {
         token: state.token,
-        user: state.user.admin,
+        isLoggedIn: state.user.loggedIn,
         errors: state.user.formErrors
     }
 }

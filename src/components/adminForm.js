@@ -21,6 +21,14 @@ class AdminForm extends Component {
             } 
     }
 
+    componentDidUpdate() {
+        if(this.props.isLoggedIn === false) {
+           this.setState({
+               shouldRedirect: true
+           })
+        }
+    }
+
     
     handleInputChange = event => {
         console.log( event.target.name, event.target.id, event.target.value, this.state)
@@ -33,14 +41,8 @@ class AdminForm extends Component {
         event.preventDefault()
         this.props.updateAbout( this.props.token, this.state.abtitle, this.state.abcontent, this.props.about.id  )  
         this.setState({
-            wftitle: '',
-            wfcontent: '',
             abtitle: '',
-            abcontent: '',
-            homecontent: '',
-            contitle: '',
-            concontent: '',
-            shouldRedirect: true
+            abcontent: ''
         })
     }
 
@@ -162,7 +164,8 @@ const mapStateToProps = state => {
         home: state.home,
         work: state.work,
         workflow: state.workflow,
-        contact: state.contact
+        contact: state.contact,
+        isLoggedIn: state.user.loggedIn
     }
 }
 export default connect(mapStateToProps, {

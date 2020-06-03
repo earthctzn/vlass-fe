@@ -17,7 +17,7 @@ class SignupInput extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if(this.props.user && !prevProps.user) {
+        if(this.props.isLoggedIn === true) {
            this.setState({
                shouldRedirect: true
            })
@@ -47,7 +47,7 @@ class SignupInput extends Component {
 
     render() {
         return this.state.shouldRedirect ? 
-         (<Redirect to="/home" /> ) 
+         (<Redirect to="/building" /> ) 
          : 
          (
             <div className="signup">
@@ -97,7 +97,7 @@ class SignupInput extends Component {
 const mapStateToProps = state => {
     return {
         errors: state.user.formErrors,
-        user: state.user.admin,
+        isLoggedIn: state.user.loggedIn,
         token: state.token
     }
 } 
