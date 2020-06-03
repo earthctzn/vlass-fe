@@ -22,17 +22,17 @@ export const fetchAbout = () => {
     }
 }
 
-export const updateAbout = (csrf_token, about) => {
+export const updateAbout = (csrf_token, title, content, id) => {
     return async function (dispatch) {
         try{
             dispatch(loadingAbout())
             const formData = { about: {
-                id: about.id,
-                title: about.title,
-                content: about.content
+                id: id,
+                title: title,
+                content: content
             }};
-            
-            const response = await fetch(`http://localhost:3000//api/v1/about/${about.id}`,{
+            console.log("this is the form data", formData)
+            const response = await fetch(`http://localhost:3000/api/v1/about/${id}`,{
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,11 +45,8 @@ export const updateAbout = (csrf_token, about) => {
                 throw response
             }
             const abtData = await response.json()
-            if (abtData.errors) {
-                console.log(abtData.errors)
-            }else{
-                dispatch(setAbout(abtData))
-            }
+            dispatch(setAbout(abtData))
+            
 
         } catch(data) {
             console.log(data)

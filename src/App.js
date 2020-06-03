@@ -17,6 +17,7 @@ import { fetchHome } from './actions/homeActions'
 import { fetchWork } from './actions/workActions'
 import { fetchWorkflow } from './actions/workflowActions'
 import { fetchContact } from './actions/contactActions'
+import AdminForm from './components/adminForm'
 
 import { 
   BrowserRouter as Router, 
@@ -51,9 +52,10 @@ class App extends Component {
     }
   }
 
+
   render(){
     this.loading()
-    return (
+    return(
       <>
         <Router>
           <NavBar/>
@@ -63,6 +65,9 @@ class App extends Component {
               </Route>
               <Route exact path="/boss">
                 <LoginForm />
+              </Route>
+              <Route exact path="/building">
+                <AdminForm /> 
               </Route>
             </Switch>
         </Router>

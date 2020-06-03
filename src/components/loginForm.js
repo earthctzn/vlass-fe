@@ -48,7 +48,7 @@ class LoginInput extends Component {
 
     render() {
         return this.state.shouldRedirect ? 
-         (<Redirect to="/home" /> ) 
+         (<Redirect to="/building" /> ) 
          : 
          (
             <div className="signup">

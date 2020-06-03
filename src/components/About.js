@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
+//make this a class component and conditionally render edit button
+
 export default function About({ title, content, loading }) {
   return (
     <div className={"section"}>
