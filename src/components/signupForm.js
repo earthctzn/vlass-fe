@@ -16,14 +16,6 @@ class SignupInput extends Component {
         }
     }
 
-    componentDidUpdate(prevProps) {
-        if(this.props.isLoggedIn === true) {
-           this.setState({
-               shouldRedirect: true
-           })
-        }
-    }
-
     renderErrors = () => {
        return this.props.errors.map(error => <ErrorComponent key={error} error={error} />)
     } 
@@ -46,7 +38,8 @@ class SignupInput extends Component {
     }
 
     render() {
-        return this.state.shouldRedirect ? 
+        console.log(this.state.shouldRedirect, this.props.isLoggedIn)
+        return this.props.isLoggedIn? 
          (<Redirect to="/building" /> ) 
          : 
          (

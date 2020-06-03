@@ -11,16 +11,16 @@ class LoginInput extends Component {
         super(props)
             this.state = {
             username: '',
-            password: ''
+            password: '',
+            shouldRedirect: false
         }
     }
 
-    componentDidUpdate() {
-        
+    componentDidMount() {
         if(this.props.isLoggedIn === true) {
-           this.setState({
-               shouldRedirect: true
-           })
+            this.setState({
+                shouldRedirect: true
+            })
         }
     }
 
@@ -39,14 +39,16 @@ class LoginInput extends Component {
         this.props.loginUser(this.props.token, this.state)
         this.setState({
             username: '',
-            password: ''
+            password: '',
+            shouldRedirect: true
         })
         this.props.clearErrors()
              
     }
 
     render() {
-        return this.state.shouldRedirect ? 
+        console.log("login render", this.state.shouldRedirect)
+        return this.props.isLoggedIn ? 
          (<Redirect to="/building" /> ) 
          : 
          (

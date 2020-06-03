@@ -3,6 +3,10 @@ import { connect } from 'react-redux'
 // import { ErrorComponent } from './ErrorComponent'
 import { Redirect } from 'react-router-dom'
 import { updateAbout } from '../actions/aboutActions'
+import { updateHome } from '../actions/homeActions'
+import { updateContact } from '../actions/contactActions'
+import { updateWorkflow } from '../actions/workflowActions'
+
 
 
 
@@ -21,17 +25,16 @@ class AdminForm extends Component {
             } 
     }
 
-    componentDidUpdate() {
+    componentDidMount() {
         if(this.props.isLoggedIn === false) {
-           this.setState({
-               shouldRedirect: true
-           })
+            this.setState({
+                shouldRedirect: true
+            })
         }
     }
 
     
     handleInputChange = event => {
-        console.log( event.target.name, event.target.id, event.target.value, this.state)
         this.setState({
            [event.target.id]: event.target.value 
         })
@@ -47,10 +50,11 @@ class AdminForm extends Component {
     }
 
     render() {
-        return this.state.shouldRedirect ? 
-        (<Redirect to="/boss" /> ) 
-        : 
-        (
+        console.log("admin form should redirect?", this.props.isLoggedIn)
+        return (!this.props.isLoggedIn ?
+            ( <Redirect to="/boss" /> )
+            :
+            (
             <div className="signup">
                 <div className="login-card" >
                     <h3>{this.props.home.title}</h3>
@@ -64,7 +68,7 @@ class AdminForm extends Component {
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button id="login-button" 
+                        <button name="homebtn" id="login-button" 
                             // onClick={ this.props.updateHome(this.props.token, this.state.home)} 
                         > 
                             submit 
@@ -145,7 +149,7 @@ class AdminForm extends Component {
                         >
                         </input>
                         <button id="login-button" 
-                            // onClick={ this.props.updateWorkflow(this.props.token, this.state.workflow)} 
+                            onClick={ e => this.handleOnSubmit(e)} 
                         > 
                             submit 
                         </button>
@@ -153,6 +157,7 @@ class AdminForm extends Component {
                 </div>
          
             </div>
+            )
         )
     }
 }
@@ -169,9 +174,9 @@ const mapStateToProps = state => {
     }
 }
 export default connect(mapStateToProps, {
-    updateAbout
-    // updateHome, 
+    updateAbout,
+    updateHome, 
     // updateWork, 
-    // updateWorkflow, 
-    // updateContact
+    updateWorkflow, 
+    updateContact
 })(AdminForm)
