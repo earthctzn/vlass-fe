@@ -25,11 +25,13 @@ export const fetchAbout = () => {
 export const updateAbout = (csrf_token, about) => {
     return async function (dispatch) {
         try{
+            dispatch(loadingAbout())
             const formData = { about: {
                 id: about.id,
                 title: about.title,
                 content: about.content
             }};
+            
             const response = await fetch(`http://localhost:3000//api/v1/about/${about.id}`,{
                 method: 'PATCH',
                 headers: {
