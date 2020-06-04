@@ -46,7 +46,7 @@ class SignupInput extends Component {
             <div className="signup">
                 <div className="signup-card" >
                     <h3>Signup below:</h3>
-                    <form className="signup-form" onSubmit={this.handleOnSubmit}>
+                    <form onSubmit={this.handleOnSubmit}>
                         <input
                             className='signup-input'
                             id='username'

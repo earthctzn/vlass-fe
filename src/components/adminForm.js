@@ -96,104 +96,112 @@ class AdminForm extends Component {
                 <div id="admin-card" >
 
                     <h3>HOME</h3>
-                    <form >
-                        <input
-                            className="admin-input"
-                            id="homecontent"
-                            type="text" 
-                            placeholder={this.props.home.content}
-                            value={this.state.homecontent}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <button id="home-button" 
-                            onClick={ e => this.handleClick(e)} 
-                        > 
-                             Submit
-                        </button>
-                    </form>
+                    <div id="forms">
+                        <form >
+                            <input
+                                className="admin-input"
+                                id="homecontent"
+                                type="text" 
+                                placeholder={this.props.home.content}
+                                value={this.state.homecontent}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </input>
+                            <button id="home-button" 
+                                onClick={ e => this.handleClick(e)} 
+                            > 
+                                Submit
+                            </button>
+                        </form>
+                    </div>
 
                     <h3>WHAT WE DO</h3>
-                    <form >
-                        <input
-                            className="admin-input"
-                            id='abtitle'
-                            type="text" 
-                            placeholder={this.props.about.title}
-                            value={this.state.abtitle}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <input
-                            className="admin-input"
-                            id="abcontent"
-                            type="text" 
-                            placeholder={this.props.about.content}
-                            value={this.state.abcontent}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <button id="abt-button" 
-                            onClick={e => this.handleClick(e)} > 
-                            submit 
-                        </button>
-                    </form>
+                    <div id="forms">
+                        <form >
+                            <input
+                                className="admin-input"
+                                id='abtitle'
+                                type="text" 
+                                placeholder={this.props.about.title}
+                                value={this.state.abtitle}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </input>
+                            <textarea
+                                className="admin-input"
+                                id="abcontent"
+                                type="text" 
+                                placeholder={this.props.about.content}
+                                value={this.state.abcontent}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </textarea>
+                            <button id="abt-button" 
+                                onClick={e => this.handleClick(e)} > 
+                                submit 
+                            </button>
+                        </form> 
+                    </div>
+                   
                 
                     <h3>WORKFLOW</h3>
-                    <form >
-                        <input
-                            className="admin-input"
-                            id='wftitle'
-                            type="text" 
-                            placeholder={this.props.workflow.title}
-                            value={this.state.wftitle}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <input
-                            className="admin-input"
-                            id="wfcontent"
-                            type="text" 
-                            placeholder={this.props.workflow.content}
-                            value={this.state.wfcontent}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <button id="wf-button" 
-                            onClick={ e => this.handleClick(e)} 
-                        > 
-                            submit 
-                        </button>
-                    </form>
-
+                    <div id="forms">
+                        <form >
+                            <input
+                                className="admin-input"
+                                id='wftitle'
+                                type="text" 
+                                placeholder={this.props.workflow.title}
+                                value={this.state.wftitle}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </input>
+                            <textarea
+                                className="admin-input"
+                                id="wfcontent"
+                                type="text" 
+                                placeholder={this.props.workflow.content}
+                                value={this.state.wfcontent}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </textarea>
+                            <button id="wf-button" 
+                                onClick={ e => this.handleClick(e)} 
+                            > 
+                                submit 
+                            </button>
+                        </form>
+                    </div>
+                    
                     <h3>CONTACT</h3>
-                    <form >
-                        <input
-                            className="admin-input"
-                            id='contitle'
-                            type="text" 
-                            placeholder={this.props.contact.title}
-                            value={this.state.contitle}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <input
-                            className="admin-input"
-                            id="concontent"
-                            type="text" 
-                            placeholder={this.props.contact.content}
-                            value={this.state.concontent}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <button id="contact-button" 
-                            onClick={ e => this.handleClick(e)} 
-                        > 
-                            submit 
-                        </button>
-                    </form>
+                    <div id="forms">
+                        <form >
+                            <input
+                                className="admin-input"
+                                id='contitle'
+                                type="text" 
+                                placeholder={this.props.contact.title}
+                                value={this.state.contitle}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </input>
+                            <input
+                                className="admin-input"
+                                id="concontent"
+                                type="text" 
+                                placeholder={this.props.contact.content}
+                                value={this.state.concontent}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </input>
+                            <button id="contact-button" 
+                                onClick={ e => this.handleClick(e)} 
+                            > 
+                                submit 
+                            </button>
+                        </form>
+                    </div>
                 </div>
-         
             </div>
             )
         )

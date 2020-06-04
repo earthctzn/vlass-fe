@@ -188,7 +188,7 @@ h1 {
 
 .error-card {
   background-color: rgba(248, 243, 243, 0.4);
-  color: darkred;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,7 +215,7 @@ h1 {
 
 .signup-card, .login-card{
   background-color: rgba(155, 146, 146, 0.5);
-  color: darkred;
+  color: black;
   width: 250px;
   display: inline-block;
   display: inline-table;
@@ -228,7 +228,7 @@ h1 {
 }
 #admin-card {
   background-color: rgba(155, 146, 146, 0.5);
-  color: darkred;
+  color: black;
   width: 500px;
   display: inline-block;
   display: inline-table;
@@ -239,8 +239,11 @@ h1 {
   border-style: solid;
   border-color: black;
 }
-form {
+#forms {
+  margin-left: 4em;
+  margin-right: 4em;
   display: flex;
+  align-items: center;
   justify-items: center;
   justify-content: center;
 }
@@ -249,25 +252,25 @@ form {
   text-align: center;
   width: 300px;
   border-radius: .2in;
-  background-color: seashell;
+  background-color: white;
 }
 .signup-input, .login-input{
   text-align: center;
   width: 200px;
   border-radius: .2in;
-  background-color: seashell;
+  background-color: white;
 }
 #signup-button, #login-button, #home-button, #abt-button, #contact-button, #wf-button {
   text-align: center;
   width: 80px;
   border-radius: .2in;
-  background-color: seashell;
+  background-color: white;
 }
 #logout-button{
   text-align: center;
   width: 100px;
   border-radius: .2in;
-  background-color: seashell;
+  background-color: white;
 }
 
 

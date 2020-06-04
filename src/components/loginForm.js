@@ -54,29 +54,31 @@ class LoginInput extends Component {
             <div className="signup">
                 <div className="login-card" >
                     <h3>Login to edit site.</h3>
-                    <form onSubmit={this.handleOnSubmit}>
-                        <input
-                            className="login-input"
-                            id='username'
-                            type="text" 
-                            placeholder="username"
-                            value={this.state.username}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <input
-                            className="login-input"
-                            id="password"
-                            type="password" 
-                            placeholder="password"
-                            value={this.state.password}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <button id="login-button" type="submit" > Log In </button>
-                    </form>
-                    <div>
-                        {this.renderErrors()}  
+                    <div id="forms">
+                        <form onSubmit={this.handleOnSubmit}>
+                            <input
+                                className="login-input"
+                                id='username'
+                                type="text" 
+                                placeholder="username"
+                                value={this.state.username}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </input>
+                            <input
+                                className="login-input"
+                                id="password"
+                                type="password" 
+                                placeholder="password"
+                                value={this.state.password}
+                                onChange={e => this.handleInputChange(e)}
+                            >
+                            </input>
+                            <button id="login-button" type="submit" > Log In </button>
+                        </form>
+                        <div>
+                            {this.renderErrors()}  
+                        </div>
                     </div>
                 </div>
          
