@@ -89,6 +89,7 @@ class App extends Component {
           title="WORK"
           company={this.props.work.company}
           job={this.props.work.job}
+          isLoggedIn
         />
         <Workflow
           loading={this.loading()}
@@ -113,7 +114,8 @@ const mapStateToProps = state => {
     about: state.about,
     work: state.work,
     workflow: state.workflow,
-    contact: state.contact
+    contact: state.contact,
+    isLoggedIn: state.user.loggedIn
   }
 }
 
