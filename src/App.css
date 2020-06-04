@@ -167,15 +167,6 @@ h1 {
     box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
   }
 }
-/* #glass-c{
-  margin-top: 40px;
-  height: 640px;
-  width: 900px;
-  border-radius: 1em;
-  align-self: center;
-  box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
-} */
-
 
 #welcome, #work, #contact {
   background-image: url('./media/WebPageBackground.jpg');
@@ -235,13 +226,38 @@ h1 {
   border-style: solid;
   border-color: black;
 }
+#admin-card {
+  background-color: rgba(155, 146, 146, 0.5);
+  color: darkred;
+  width: 500px;
+  display: inline-block;
+  display: inline-table;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  border-radius: .3in;
+  border-style: solid;
+  border-color: black;
+}
+form {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.admin-input{
+  text-align: center;
+  width: 300px;
+  border-radius: .2in;
+  background-color: seashell;
+}
 .signup-input, .login-input{
   text-align: center;
   width: 200px;
   border-radius: .2in;
   background-color: seashell;
 }
-#signup-button, #login-button{
+#signup-button, #login-button, #home-button, #abt-button, #contact-button, #wf-button {
   text-align: center;
   width: 80px;
   border-radius: .2in;
@@ -249,7 +265,7 @@ h1 {
 }
 #logout-button{
   text-align: center;
-  width: 60px;
+  width: 100px;
   border-radius: .2in;
   background-color: seashell;
 }

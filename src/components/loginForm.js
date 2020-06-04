@@ -47,7 +47,6 @@ class LoginInput extends Component {
     }
 
     render() {
-        console.log("login render", this.state.shouldRedirect)
         return this.props.isLoggedIn ? 
          (<Redirect to="/building" /> ) 
          : 

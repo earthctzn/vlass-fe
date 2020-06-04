@@ -40,13 +40,50 @@ class AdminForm extends Component {
         })
     }
 
-    handleOnSubmit = (event) => {
+    handleClick = (event) => {
         event.preventDefault()
-        this.props.updateAbout( this.props.token, this.state.abtitle, this.state.abcontent, this.props.about.id  )  
-        this.setState({
-            abtitle: '',
-            abcontent: ''
-        })
+        switch (event.target.id){
+            case 'home-button':
+                console.log(event.target.id, "was pressed")
+                this.props.updateHome(this.props.token, this.state.homecontent, this.props.home.id )
+                this.setState({
+                    ...this.state,
+                    homecontent: ''
+                })
+                break
+            case 'abt-button':
+                console.log(event.target.id, "was pressed")
+                this.props.updateAbout( this.props.token, this.state.abtitle, this.state.abcontent, this.props.about.id  )
+                this.setState({
+                    ...this.state,
+                    abtitle: '',
+                    abcontent: ''
+                })
+                break
+            case 'wf-button':
+                console.log(event.target.id, "was pressed")
+                this.props.updateWorkflow(this.props.token, this.state.wftitle, this.state.wfcontent, this.props.workflow.id )
+                this.setState({
+                    ...this.state,
+                    wftitle: '',
+                    wfcontent: ''
+                })
+                break 
+            case 'contact-button':
+                console.log(event.target.id, "was pressed")
+                this.props.updateContact(this.props.token, this.state.contitle, this.state.concontent, this.props.contact.id )
+                this.setState({
+                    ...this.state,
+                    contitle: '',
+                    concontent: ''
+                })
+                break          
+        default:
+            return 
+        
+        }
+          
+
     }
 
     render() {
@@ -56,11 +93,12 @@ class AdminForm extends Component {
             :
             (
             <div className="signup">
-                <div className="login-card" >
-                    <h3>{this.props.home.title}</h3>
+                <div id="admin-card" >
+
+                    <h3>HOME</h3>
                     <form >
                         <input
-                            className="login-input"
+                            className="admin-input"
                             id="homecontent"
                             type="text" 
                             placeholder={this.props.home.content}
@@ -68,17 +106,17 @@ class AdminForm extends Component {
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button name="homebtn" id="login-button" 
-                            // onClick={ this.props.updateHome(this.props.token, this.state.home)} 
+                        <button id="home-button" 
+                            onClick={ e => this.handleClick(e)} 
                         > 
-                            submit 
+                             Submit
                         </button>
                     </form>
 
-                    <h3>{this.props.about.title}</h3>
+                    <h3>WHAT WE DO</h3>
                     <form >
                         <input
-                            className="login-input"
+                            className="admin-input"
                             id='abtitle'
                             type="text" 
                             placeholder={this.props.about.title}
@@ -87,7 +125,7 @@ class AdminForm extends Component {
                         >
                         </input>
                         <input
-                            className="login-input"
+                            className="admin-input"
                             id="abcontent"
                             type="text" 
                             placeholder={this.props.about.content}
@@ -95,43 +133,16 @@ class AdminForm extends Component {
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button id="login-button" 
-                            onClick={e => this.handleOnSubmit(e)} > 
+                        <button id="abt-button" 
+                            onClick={e => this.handleClick(e)} > 
                             submit 
                         </button>
                     </form>
                 
-                    <h3>{this.props.contact.title}</h3>
+                    <h3>WORKFLOW</h3>
                     <form >
                         <input
-                            className="login-input"
-                            id='contitle'
-                            type="text" 
-                            placeholder={this.props.contact.title}
-                            value={this.state.contitle}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <input
-                            className="login-input"
-                            id="concontent"
-                            type="text" 
-                            placeholder={this.props.contact.content}
-                            value={this.state.concontent}
-                            onChange={e => this.handleInputChange(e)}
-                        >
-                        </input>
-                        <button id="login-button" 
-                            // onClick={ this.props.updateContact(this.props.token, this.state.contact)} 
-                        > 
-                            submit 
-                        </button>
-                    </form>
-
-                    <h3>{this.props.workflow.title}</h3>
-                    <form >
-                        <input
-                            className="login-input"
+                            className="admin-input"
                             id='wftitle'
                             type="text" 
                             placeholder={this.props.workflow.title}
@@ -140,7 +151,7 @@ class AdminForm extends Component {
                         >
                         </input>
                         <input
-                            className="login-input"
+                            className="admin-input"
                             id="wfcontent"
                             type="text" 
                             placeholder={this.props.workflow.content}
@@ -148,8 +159,35 @@ class AdminForm extends Component {
                             onChange={e => this.handleInputChange(e)}
                         >
                         </input>
-                        <button id="login-button" 
-                            onClick={ e => this.handleOnSubmit(e)} 
+                        <button id="wf-button" 
+                            onClick={ e => this.handleClick(e)} 
+                        > 
+                            submit 
+                        </button>
+                    </form>
+
+                    <h3>CONTACT</h3>
+                    <form >
+                        <input
+                            className="admin-input"
+                            id='contitle'
+                            type="text" 
+                            placeholder={this.props.contact.title}
+                            value={this.state.contitle}
+                            onChange={e => this.handleInputChange(e)}
+                        >
+                        </input>
+                        <input
+                            className="admin-input"
+                            id="concontent"
+                            type="text" 
+                            placeholder={this.props.contact.content}
+                            value={this.state.concontent}
+                            onChange={e => this.handleInputChange(e)}
+                        >
+                        </input>
+                        <button id="contact-button" 
+                            onClick={ e => this.handleClick(e)} 
                         > 
                             submit 
                         </button>
