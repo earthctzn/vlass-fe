@@ -26,11 +26,13 @@ class Work extends Component {
     if (e.target.id === 'editbtn') {
       console.log(this.props)
       this.setState({
+        creating: false,
         editing: true
       })
     }
     if (e.target.id === 'newbtn') {
       this.setState({
+        editing: false,
         creating: true
       })
     }
@@ -60,23 +62,33 @@ class Work extends Component {
           <div key={work.id}>
             <h2>{work.companyname}</h2>
               <p id="jobs">{work.jobdescription}</p>
-              {this.props.isLoggedIn ? <button className='editbtn' id='editbtn' onClick={ e => this.handleClick( e ) }>edit</button> : null}
           </div>
         ) 
       })
     }
-
   }
+
+
 
   render() {
     return(
       <div className={"section"}>
         <div className="section-content" id={this.props.id}>
-          {this.props.isLoggedIn ? <button id='newbtn' onClick={ e => this.handleClick(e) }>new</button> : null}
+
           <h1>{this.props.title}</h1>
+
+          {this.props.isLoggedIn ?   
+            <div>
+              <button id='newbtn' onClick={ e => this.handleClick(e) }>new</button>
+              <button className='editbtn' id='editbtn' onClick={ e => this.handleClick( e ) }>edit</button>
+            </div> 
+            : 
+            null
+          }
+
           {this.props.loading}
-          {this.state.creating ? this.renderForm()  : null }
-          {this.state.editing && this.props.history.workArr.length > 0 ? this.renderForm() : null }
+          {this.state.creating || this.state.editing ? this.renderForm()  : null }
+          {/* {this.state.editing ? this.renderForm() : null } */}
           <div id="work-content">
             {this.renderWork(this.props)}
           </div>
@@ -84,7 +96,6 @@ class Work extends Component {
       </div>
     );
   }
-
 }
 
 const mapStateToProps = state => {

@@ -7,6 +7,7 @@ class WorkForm extends Component {
     constructor(props){
         super(props)
         this.state={
+            editing: '',
             companyname: '',
             jobdescription: ''
         }
@@ -39,7 +40,7 @@ class WorkForm extends Component {
                             className="login-input"
                             id='companyname'
                             type="text" 
-                            placeholder={this.props.work.companyname || "company name"}
+                            placeholder={this.props.work.companyname}
                             value={this.state.companyname}
                             onChange={e => this.handleInputChange(e)}
                         >
@@ -48,7 +49,7 @@ class WorkForm extends Component {
                             className="login-input"
                             id='jobdescription'
                             type="text" 
-                            placeholder={this.props.work.jobdescription || "enter job description"}
+                            placeholder={this.props.work.jobdescription}
                             value={this.state.jobdescription}
                             onChange={e => this.handleInputChange(e)}
                         >
