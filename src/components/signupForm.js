@@ -68,7 +68,7 @@ class SignupInput extends Component {
                         <input
                             className='signup-input'
                             id='password_confirmation'
-                            type="password_confirmation" 
+                            type="password" 
                             placeholder="password confirmation"
                             value={this.state.password_confirmation}
                             onChange={e => this.handleInputChange(e)}

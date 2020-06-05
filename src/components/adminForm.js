@@ -87,7 +87,6 @@ class AdminForm extends Component {
     }
 
     render() {
-        console.log("admin form should redirect?", this.props.isLoggedIn)
         return (!this.props.isLoggedIn ?
             ( <Redirect to="/boss" /> )
             :

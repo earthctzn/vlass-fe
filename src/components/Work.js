@@ -1,6 +1,9 @@
 import React,  { Component } from "react";
 import { connect } from "react-redux"
 
+import WorkForm from './workForm'
+import { selectedWork } from '../actions/workActions'
+
 class Work extends Component {
   constructor(props){
     super(props)
@@ -13,14 +16,15 @@ class Work extends Component {
   }
 
   handleInputChange = event => {
-    console.log(event.target.id)
     this.setState({
         [event.target.id]: event.target.value
     })
-}
+  }
 
   handleClick = (e) => {
+
     if (e.target.id === 'editbtn') {
+      console.log(this.props)
       this.setState({
         editing: true
       })
@@ -32,46 +36,47 @@ class Work extends Component {
     }
 
   }
+ 
 
-  renderWork = (props) => {
-    return props.history.workArr.map( work => {
+  renderForm = () => {
+    if (this.state.creating ) {
       return (
-        <div key={work.id}>
-          {this.state.editing ?
-          <input
-              className="login-input"
-              id={work.company}
-              type="text" 
-              placeholder={work.company}
-              value={this.state.company}
-              onChange={e => this.handleInputChange(e)}
-          >
-          </input> : <h2>{work.company}</h2>}
-          {this.state.editing ?           
-          <textarea
-              className="login-input"
-              id={work.job}
-              type="text" 
-              placeholder={work.job}
-              value={this.state.job}
-              onChange={e => this.handleInputChange(e)}
-          >
-          </textarea>  : <p id="jobs">{work.job}</p>}
-          {props.isLoggedIn ? <button className='editbtn' id='editbtn' onClick={ e => this.handleClick(e) }>edit</button> : null}
-        </div>
-      ) 
-    })
+        <WorkForm editing={this.state.editing} />
+      )
+    }
+    if (this.state.editing && this.props.history.workArr.length > 0) {
+      return this.props.history.workArr.map( work => {
+        return (
+          <WorkForm id={work.companyname} key={work.companyname} work={work} editing={this.state.editing} />
+        )
+      })
+    }
+  }
+
+  renderWork = () => {
+    if (this.props.history.workArr.length > 0 ){
+      return this.props.history.workArr.map( work => {
+        return (
+          <div key={work.id}>
+            <h2>{work.companyname}</h2>
+              <p id="jobs">{work.jobdescription}</p>
+              {this.props.isLoggedIn ? <button className='editbtn' id='editbtn' onClick={ e => this.handleClick( e ) }>edit</button> : null}
+          </div>
+        ) 
+      })
+    }
+
   }
 
   render() {
-    return (
+    return(
       <div className={"section"}>
         <div className="section-content" id={this.props.id}>
           {this.props.isLoggedIn ? <button id='newbtn' onClick={ e => this.handleClick(e) }>new</button> : null}
           <h1>{this.props.title}</h1>
           {this.props.loading}
-          {this.state.creating ? console.log('creating!') : null }
-          {this.state.editing ? console.log('editing!') : null }
+          {this.state.creating ? this.renderForm()  : null }
+          {this.state.editing && this.props.history.workArr.length > 0 ? this.renderForm() : null }
           <div id="work-content">
             {this.renderWork(this.props)}
           </div>
@@ -84,8 +89,11 @@ class Work extends Component {
 
 const mapStateToProps = state => {
   return{
-    history: state.work
+    history: state.work,
+    token: state.token
   }
 }
 
-export default connect(mapStateToProps)(Work)
+
+
+export default connect(mapStateToProps, {selectedWork})(Work)

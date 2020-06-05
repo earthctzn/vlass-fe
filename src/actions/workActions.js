@@ -2,9 +2,16 @@
 const setWork = ( workContent ) => {
     return { type: "SET_WORK", payload: workContent }
 }
+const addWork = ( workContent ) => {
+    return { type: "ADD_WORK", payload: workContent }
+}
 
 const loadingWork = () => {
     return { type: "LOADING_WORK"}
+}
+
+export const selectedWork = (workObject) => {
+    return {type: "SELECTED_WORK", payload: workObject}
 }
 
 
@@ -24,15 +31,46 @@ export const fetchWork = () => {
         }
     }
 }
+export const createWork = (csrf_token, name, description ) => {
+    return async function (dispatch) {
+        try{
+            dispatch(loadingWork())
+            const formData = { work: {
+                companyname: name,
+                jobdescription: description
+            }};
+            console.log("this is the form data", formData)
+            const response = await fetch(`http://localhost:3000/api/v1/work`,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-Token': csrf_token
+                },
+                body: JSON.stringify(formData),
+                credentials: 'include'
+            })
+            if (!response.ok) {
+                throw response
+            }
+            const workData = await response.json()
+            dispatch(addWork(workData))
+            dispatch(fetchWork())
+            
 
-export const updateWork = (csrf_token, title, content, id) => {
+        } catch(data) {
+            console.log(data)
+        };
+    }
+};
+
+export const updateWork = (csrf_token, name, description, id) => {
     return async function (dispatch) {
         try{
             dispatch(loadingWork())
             const formData = { work: {
                 id: id,
-                title: title,
-                content: content
+                companyname: name,
+                jobdescription: description
             }};
             console.log("this is the form data", formData)
             const response = await fetch(`http://localhost:3000/api/v1/work/${id}`,{
@@ -48,8 +86,8 @@ export const updateWork = (csrf_token, title, content, id) => {
                 throw response
             }
             const workData = await response.json()
-            dispatch(setWork(workData))
-            
+            dispatch(addWork(workData))
+            dispatch(fetchWork())
 
         } catch(data) {
             console.log(data)
