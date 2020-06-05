@@ -2,9 +2,9 @@
 const setWork = ( workContent ) => {
     return { type: "SET_WORK", payload: workContent }
 }
-const addWork = ( workContent ) => {
-    return { type: "ADD_WORK", payload: workContent }
-}
+// const addWork = ( workContent ) => {
+//     return { type: "ADD_WORK", payload: workContent }
+// }
 
 const loadingWork = () => {
     return { type: "LOADING_WORK"}
@@ -52,8 +52,7 @@ export const createWork = (csrf_token, name, description ) => {
             if (!response.ok) {
                 throw response
             }
-            const workData = await response.json()
-            dispatch(addWork(workData))
+            // const workData = await response.json()
             dispatch(fetchWork())
             
 
@@ -85,8 +84,7 @@ export const updateWork = (csrf_token, name, description, id) => {
             if (!response.ok) {
                 throw response
             }
-            const workData = await response.json()
-            dispatch(addWork(workData))
+            // const workData = await response.json()
             dispatch(fetchWork())
 
         } catch(data) {

@@ -35,7 +35,7 @@ class NavBar extends Component {
                                 to="welcome"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={-60}
                                 duration= {700}
                             >
                                 HOME

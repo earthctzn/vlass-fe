@@ -57,10 +57,10 @@
   color: black;
 }
 #work-content {
-  margin: 3em;
+  margin: 2em;
   display: grid;
   grid-template-columns: auto auto;
-  grid-column-gap: 300px;
+  grid-column-gap: 200px;
 }
 #about-content {
   max-width: 600px;
