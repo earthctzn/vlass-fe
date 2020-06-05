@@ -209,7 +209,11 @@ h1 {
   justify-content: center;
 }
 
-#contact-h2 {
+#contact-h1 {
+  margin-top: 2em;
+}
+
+#contact-h2, #contact-h1 {
   font-family: lemonMilk-light;
 }
 
@@ -248,7 +252,7 @@ h1 {
   justify-content: center;
 }
 
-input {
+input , textarea{
   font-size: medium;
 }
 
@@ -271,6 +275,7 @@ input {
   width: 80px;
   border-radius: .2in;
   background-color: white;
+  font-size: medium;
 }
 #logout-button, .create-btn, #newbtn, .editbtn, .newbtn, #editbtn, .update-btn{
   text-align: center;
@@ -278,7 +283,38 @@ input {
   border-radius: .2in;
   background-color: white;
   margin-bottom: 10px;
+  font-size: medium;
+
 }
+#logout-button:hover, .create-btn:hover, #newbtn:hover, .editbtn:hover, .newbtn:hover, #editbtn:hover, .update-btn:hover, #signup-button:hover, #login-button:hover, #home-button:hover, #abt-button:hover, #contact-button:hover, #wf-button:hover{
+  background-color: rgba(87, 82, 82, 0.4);
+}
+
+#footer {
+  color: #000000;
+  padding: 5px 0 5px 0;
+}
+
+  #footer a {
+    color: #24a4ad;
+  }
+  #footer a:hover {
+    color: #8224ad;
+    text-decoration: none;
+  }
+
+  #footer strong, #footer b {
+    color: #070606;
+  }
+
+  #footer .copyright {
+
+    font-size: 1em;
+    margin: 0 0 2em 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+  }
 
 
 
