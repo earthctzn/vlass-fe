@@ -77,33 +77,40 @@ class Work extends Component {
       : 
       null
   }
+  renderAdmin = () => {
+    return this.props.isLoggedIn ?
+    (
+      <>
+        {this.renderButtons()}
 
-
+        {this.props.loading}
+        {this.state.creating || this.state.editing ? 
+          <div className="signup">
+            <div id="admin-card" >
+              {this.renderForm()}  
+            </div>
+          </div>
+          : 
+          null 
+        }
+      </>
+    )
+    :
+    (
+      null
+    )
+  }
 
   render() {
     return(
       <div className={"section"}>
-        <div className="section-content" id={this.props.id}>
-
-          <h1>{this.props.title}</h1>
-
-          {this.renderButtons()}
-
-          {this.props.loading}
-          {this.props.isLoggedIn && this.state.creating || this.state.editing ? 
-            <div className="signup">
-              <div id="admin-card" >
-                {this.renderForm()}  
-              </div>
+          <div className="section-content" id={this.props.id}>
+            <h1>{this.props.title}</h1>
+            {this.renderAdmin()}
+            <div id="work-content">
+              {this.renderWork(this.props)}
             </div>
-            : 
-            null 
-          }
-  
-          <div id="work-content">
-            {this.renderWork(this.props)}
           </div>
-        </div>
       </div>
     );
   }
