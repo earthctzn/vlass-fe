@@ -248,6 +248,9 @@ h1 {
   justify-content: center;
 }
 
+input {
+  font-size: medium;
+}
 
 .admin-input{
   text-align: center;

@@ -49,7 +49,12 @@ class Work extends Component {
     if (this.state.editing && this.props.history.workArr.length > 0) {
       return this.props.history.workArr.map( work => {
         return (
-          <WorkForm id={work.companyname} key={work.companyname} work={work} editing={this.state.editing} />
+          <WorkForm 
+            id={work.companyname} 
+            key={work.companyname} 
+            work={work} 
+            editing={this.state.editing} 
+          />
         )
       })
     }
@@ -71,8 +76,21 @@ class Work extends Component {
   renderButtons = () => {
    return this.props.isLoggedIn ?   
       <div id="buttons-div">
-        <button className="newbtn" id='newbtn' onClick={ e => this.handleClick(e) }>new</button>
-        <button className='editbtn' id='editbtn' onClick={ e => this.handleClick( e ) }>edit</button>
+
+        <button 
+          className="newbtn" 
+          id='newbtn' 
+          onClick={ e => this.handleClick(e) }>
+            new
+        </button>
+
+        <button 
+          className='editbtn' 
+          id='editbtn' 
+          onClick={ e => this.handleClick( e ) }>
+            edit
+        </button>
+        
       </div> 
       : 
       null
