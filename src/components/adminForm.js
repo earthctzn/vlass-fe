@@ -137,7 +137,7 @@ class AdminForm extends Component {
                             </textarea>
                             <button id="abt-button" 
                                 onClick={e => this.handleClick(e)} > 
-                                submit 
+                                Submit 
                             </button>
                         </form> 
                     </div>
@@ -167,7 +167,7 @@ class AdminForm extends Component {
                             <button id="wf-button" 
                                 onClick={ e => this.handleClick(e)} 
                             > 
-                                submit 
+                                Submit 
                             </button>
                         </form>
                     </div>
@@ -196,7 +196,7 @@ class AdminForm extends Component {
                             <button id="contact-button" 
                                 onClick={ e => this.handleClick(e)} 
                             > 
-                                submit 
+                                Submit 
                             </button>
                         </form>
                     </div>

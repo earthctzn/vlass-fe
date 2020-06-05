@@ -68,6 +68,16 @@ class Work extends Component {
     }
   }
 
+  renderButtons = () => {
+   return this.props.isLoggedIn ?   
+      <div id="buttons-div">
+        <button className="newbtn" id='newbtn' onClick={ e => this.handleClick(e) }>new</button>
+        <button className='editbtn' id='editbtn' onClick={ e => this.handleClick( e ) }>edit</button>
+      </div> 
+      : 
+      null
+  }
+
 
 
   render() {
@@ -77,18 +87,19 @@ class Work extends Component {
 
           <h1>{this.props.title}</h1>
 
-          {this.props.isLoggedIn ?   
-            <div>
-              <button id='newbtn' onClick={ e => this.handleClick(e) }>new</button>
-              <button className='editbtn' id='editbtn' onClick={ e => this.handleClick( e ) }>edit</button>
-            </div> 
-            : 
-            null
-          }
+          {this.renderButtons()}
 
           {this.props.loading}
-          {this.state.creating || this.state.editing ? this.renderForm()  : null }
-          {/* {this.state.editing ? this.renderForm() : null } */}
+          {this.props.isLoggedIn && this.state.creating || this.state.editing ? 
+            <div className="signup">
+              <div id="admin-card" >
+                {this.renderForm()}  
+              </div>
+            </div>
+            : 
+            null 
+          }
+  
           <div id="work-content">
             {this.renderWork(this.props)}
           </div>
@@ -101,7 +112,8 @@ class Work extends Component {
 const mapStateToProps = state => {
   return{
     history: state.work,
-    token: state.token
+    token: state.token,
+    isLoggedIn: state.user.loggedIn
   }
 }
 

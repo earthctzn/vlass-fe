@@ -242,17 +242,20 @@ h1 {
 #forms {
   margin-left: 4em;
   margin-right: 4em;
-  display: flex;
+  display: block;
   align-items: center;
   justify-items: center;
   justify-content: center;
 }
+
 
 .admin-input{
   text-align: center;
   width: 300px;
   border-radius: .2in;
   background-color: white;
+  border-color: black;
+  border-width: 1px;
 }
 .signup-input, .login-input{
   text-align: center;
@@ -266,68 +269,13 @@ h1 {
   border-radius: .2in;
   background-color: white;
 }
-#logout-button{
+#logout-button, .create-btn, #newbtn, .editbtn, .newbtn, #editbtn, .update-btn{
   text-align: center;
-  width: 100px;
+  width: 150px;
   border-radius: .2in;
   background-color: white;
-}
-
-
-/* #glass-c{
-  margin-top: 40px;
-  height: 600px;
-  border-radius: 1em;
-}
-
-.container-md {
-  background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  
-}
-.nav-links{
-  display: flex;
-  align-items: space-between;
-}
-
-#home, #work, #contact {
-  background-image: url('./media/WebPageBackground.jpg');
-  background-size: cover;
-  z-index: 4;
-  box-shadow: grey;
-}
-#wfheader{
-  
-  text-shadow: 1px 1px 2px black; 
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-#wflow{
-  display: flex;
-  width: auto;
-  height: 230px;
-  align-self: center;
+  margin-bottom: 10px;
 }
 
 
 
-.App-link {
-  color: #61dafb;
-}
- */

@@ -87,7 +87,6 @@ class App extends Component {
           loading={this.loading()}
           id="work"
           title="WORK"
-          isLoggedIn
         />
         <Workflow
           loading={this.loading()}
