@@ -59,8 +59,12 @@
 #work-content {
   margin: 2em;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 500px 500px;
   grid-column-gap: 200px;
+
+}
+#work-div, #work-p{
+  word-wrap: normal;
 }
 #about-content {
   max-width: 600px;
@@ -69,6 +73,7 @@
   font-family: lemonMilk-regular;
 }
 #jobs{
+  word-wrap: normal;
   font-family: lemonMilk-light;
 }
 p{

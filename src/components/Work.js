@@ -64,8 +64,8 @@ class Work extends Component {
     if (this.props.history.workArr.length > 0 ){
       return this.props.history.workArr.map( work => {
         return (
-          <div key={work.id}>
-            <h2>{work.companyname}</h2>
+          <div id="work-div" key={work.id}>
+            <h2 >{work.companyname}</h2>
               <p id="jobs">{work.jobdescription}</p>
           </div>
         ) 
@@ -90,7 +90,7 @@ class Work extends Component {
           onClick={ e => this.handleClick( e ) }>
             edit
         </button>
-        
+
       </div> 
       : 
       null

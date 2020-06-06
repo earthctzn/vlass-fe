@@ -85,7 +85,7 @@ class NavBar extends Component {
                                 to="contact"
                                 spy={true}
                                 smooth={true}
-                                offset={40}
+                                offset={65}
                                 duration= {700}
                             >
                                 CONTACT
