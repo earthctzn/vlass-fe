@@ -2,7 +2,7 @@
 export const getToken = () => {
     return async function (dispatch) {
         try{
-            const res = await fetch('http://localhost:3000/api/v1/auth', {credentials: 'include'})
+            const res = await fetch('https://vlass-be.herokuapp.com/api/v1/auth', {credentials: 'include'})
             if(!res.ok){
                 throw res
             }

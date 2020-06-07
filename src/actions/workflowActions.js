@@ -13,7 +13,7 @@ export const fetchWorkflow = () => {
     return async dispatch => {
         try {
             dispatch(loadingWorkflow())
-                const response = await fetch('http://localhost:3000/api/v1/workflow', {credentials: 'include'})
+                const response = await fetch('https://vlass-be.herokuapp.com/api/v1/workflow', {credentials: 'include'})
                 if (!response.ok) {
                     throw response
                 }
@@ -35,7 +35,7 @@ export const updateWorkflow = (csrf_token, title, content, id) => {
                 content: content
             }};
             console.log("this is the form data", formData)
-            const response = await fetch(`http://localhost:3000/api/v1/workflow/${id}`,{
+            const response = await fetch(`https://vlass-be.herokuapp.com/api/v1/workflow/${id}`,{
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

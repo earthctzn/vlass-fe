@@ -48,7 +48,7 @@ export const signupUser = (token, user) => {
         };
 
         try{
-            const response = await fetch('http://localhost:3000/api/v1/signup', options)
+            const response = await fetch('https://vlass-be.herokuapp.com/api/v1/signup', options)
             const dataObj = await response.json();
             if (dataObj.errors){
                 dispatch(setErrors(dataObj))
@@ -66,7 +66,7 @@ export const signupUser = (token, user) => {
 export const getUser = () => {
     return async function (dispatch) {
         try{
-            const res = await fetch('http://localhost:3000/api/v1/user', {
+            const res = await fetch('https://vlass-be.herokuapp.com/api/v1/user', {
                 credentials: 'include'
             })
             if(!res.ok){
@@ -90,7 +90,7 @@ export const getUser = () => {
 export const logOutUser = (token) => {
     return async function (dispatch) {
         try{
-           await fetch('http://localhost:3000/api/v1/logout', {
+           await fetch('https://vlass-be.herokuapp.com/api/v1/logout', {
                 method: 'DELETE',
                 credentials: 'include',
                 headers: {

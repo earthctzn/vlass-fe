@@ -12,7 +12,7 @@ export const fetchContact = () => {
     return async dispatch => {
         try {
             dispatch(loadingContact())
-                const response = await fetch('http://localhost:3000/api/v1/contact', {credentials: 'include'})
+                const response = await fetch('https://vlass-be.herokuapp.com/api/v1/contact', {credentials: 'include'})
                 if (!response.ok) {
                     throw response
                 }
@@ -34,7 +34,7 @@ export const updateContact = (csrf_token, title, content, id) => {
                 content: content
             }};
             console.log("this is the form data", formData)
-            const response = await fetch(`http://localhost:3000/api/v1/contact/${id}`,{
+            const response = await fetch(`https://vlass-be.herokuapp.com/api/v1/contact/${id}`,{
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

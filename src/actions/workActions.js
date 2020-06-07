@@ -20,7 +20,7 @@ export const fetchWork = () => {
     return async dispatch => {
         try {
             dispatch(loadingWork())
-                const response = await fetch('http://localhost:3000/api/v1/work', {credentials: 'include'})
+                const response = await fetch('https://vlass-be.herokuapp.com/api/v1/work', {credentials: 'include'})
                 if (!response.ok) {
                     throw response
                 }
@@ -40,7 +40,7 @@ export const createWork = (csrf_token, name, description ) => {
                 jobdescription: description
             }};
             console.log("this is the form data", formData)
-            const response = await fetch(`http://localhost:3000/api/v1/work`,{
+            const response = await fetch(`https://vlass-be.herokuapp.com/api/v1/work`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export const updateWork = (csrf_token, name, description, id) => {
                 jobdescription: description
             }};
             console.log("this is the form data", formData)
-            const response = await fetch(`http://localhost:3000/api/v1/work/${id}`,{
+            const response = await fetch(`https://vlass-be.herokuapp.com/api/v1/work/${id}`,{
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
