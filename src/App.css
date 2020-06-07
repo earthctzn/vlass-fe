@@ -59,6 +59,7 @@
 
 .nav-items{
   margin-top: 15px;
+  padding-inline-start: 0px;
 }
 
 
@@ -80,7 +81,7 @@
   color: black;
 }
 #work-content {
-  margin: 2em;
+  margin: 3em;
   display: grid;
   grid-template-columns: 500px 500px;
   grid-column-gap: 200px;
