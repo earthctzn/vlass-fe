@@ -35,7 +35,11 @@ class NavBar extends Component {
         const { toggle } = this.state
         return(
             <>
-                <button onClick={this.onToggle}><img src={hamburger} alt="menu icon"></img></button>
+                <div className='navtoggle-div'>
+                    <button id="nav-toggle" onClick={this.onToggle}>
+                        <img id="nav-img" src={hamburger} alt="menu icon"></img>
+                    </button>
+                </div>
                 <Spring 
                 from={{ height: toggle ? 0 : 'auto' }}
                 to={{ height: toggle ? 'auto' : 0 }}
