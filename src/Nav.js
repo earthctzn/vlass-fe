@@ -2,15 +2,15 @@ import React, { Component } from "react"
 import { Link } from "react-scroll"
 import { connect } from 'react-redux'
 import { logOutUser } from './actions/userActions'
-import { Spring, animated } from 'react-spring/renderprops'
-import  hamburger  from './media/hamburger.png'
+// import { Spring, animated } from 'react-spring/renderprops'
+// import  hamburger  from './media/hamburger.png'
 
 class NavBar extends Component {
-    state={
-        toggle: true
-    }
+    // state={
+    //     toggle: true
+    // }
 
-    onToggle = () => this.setState(state => ({ toggle: !state.toggle }))
+    // onToggle = () => this.setState(state => ({ toggle: !state.toggle }))
 
     handleClick = () => {
         this.props.logOutUser( this.props.token )
@@ -32,22 +32,19 @@ class NavBar extends Component {
     };
 
     render(){
-        const { toggle } = this.state
+        // const { toggle } = this.state
         return(
             <>
-                <div className='navtoggle-div'>
-                    <button id="nav-toggle" onClick={this.onToggle}>
-                        <img id="nav-img" src={hamburger} alt="menu icon"></img>
-                    </button>
-                </div>
-                <Spring 
+
+                {/* <Spring 
                 from={{ height: toggle ? 0 : 'auto' }}
                 to={{ height: toggle ? 'auto' : 0 }}
-                >
-                    { props => (
-                        <animated.div style={props}>
+                > */}
+                    {/* { props => ( */}
+                        {/* <animated.div style={props}> */}
                             <nav className="nav" id="navbar">
                                 <div className="nav-content">
+
                                     <ul className="nav-items">
                                         <li className="nav-item">
                                             <Link
@@ -115,11 +112,15 @@ class NavBar extends Component {
                                         {this.renderUser()}
 
                                     </ul> 
+                            
                                 </div>
+                                    {/* <button id="nav-toggle" onClick={this.onToggle}>
+                                        <img id="nav-img" src={hamburger} alt="menu icon"></img>
+                                    </button> */}
                             </nav>
-                        </animated.div>
+                        {/* </animated.div>
                     )}
-                </Spring>
+                </Spring> */}
             </>
 
         )
