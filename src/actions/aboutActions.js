@@ -10,7 +10,9 @@ export const fetchAbout = () => {
     return async dispatch => {
         try {
             dispatch(loadingAbout())
-                const response = await fetch('https://vlass-be.herokuapp.com/api/v1/about', {credentials: 'include'})
+                const response = await fetch('https://vlass-be.herokuapp.com/api/v1/about', 
+                    {credentials: 'include'}
+                )
                 if (!response.ok) {
                     throw response
                 }
