@@ -77,7 +77,7 @@ class NavBar extends Component {
                                                 to="work"
                                                 spy={true}
                                                 smooth={true}
-                                                offset={-20}
+                                                offset={-40}
                                                 duration= {700}
                                             >
                                                 WORK
@@ -89,7 +89,7 @@ class NavBar extends Component {
                                                 to="workflow"
                                                 spy={true}
                                                 smooth={true}
-                                                offset={-15}
+                                                offset={-40}
                                                 duration= {700}
                                             >
                                                 WORKFLOW
