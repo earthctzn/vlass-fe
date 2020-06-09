@@ -246,9 +246,10 @@ h1 {
 
 #contact-h1 {
   margin-top: 2em;
+  font-family: lemonMilk-bold;
 }
 
-#contact-h2, #contact-h1 {
+#contact-h2 {
   font-family: lemonMilk-light;
 }
 
