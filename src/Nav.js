@@ -31,31 +31,6 @@ class NavBar extends Component {
         }
     };
 
-    renderHomeLink = () => {
-        return isLoggedIn ? 
-            <Link
-                activeClass="active"
-                to="welcome"
-                spy={true}
-                smooth={true}
-                offset={-90}
-                duration= {700}
-            >
-                HOME
-            </Link>
-            :
-            <Link
-                activeClass="active"
-                to="welcome"
-                spy={true}
-                smooth={true}
-                offset={-60}
-                duration= {700}
-            >
-                HOME
-            </Link>
-    }
-
     render(){
         // const { toggle } = this.state
         return(
@@ -72,7 +47,16 @@ class NavBar extends Component {
 
                                     <ul className="nav-items">
                                         <li className="nav-item">
-                                            {this.renderHomeLink()}
+                                            <Link
+                                                activeClass="active"
+                                                to="welcome"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-60}
+                                                duration= {700}
+                                            >
+                                                HOME
+                                            </Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link
