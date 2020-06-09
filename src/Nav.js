@@ -52,7 +52,7 @@ class NavBar extends Component {
                                                 to="welcome"
                                                 spy={true}
                                                 smooth={true}
-                                                offset={-60}
+                                                offset={ this.props.isLoggedIn ? -90 : -60}
                                                 duration= {700}
                                             >
                                                 HOME
