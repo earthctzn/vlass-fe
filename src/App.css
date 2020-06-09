@@ -48,6 +48,7 @@
   align-items: center;
   height: 100%;
   position: relative;
+  font-size: calc(10px + 2vmin);
   font-family: lemonMilk-regular;
 }
 .nav-item {
@@ -89,12 +90,14 @@
 }
 #work-div, #work-p{
   word-wrap: normal;
+  font-size: calc(10px + 2vmin);
 }
 #about-content {
   max-width: 600px;
   text-align: center;
   overflow-wrap: break-word;
   font-family: lemonMilk-regular;
+  font-size: calc(10px + 2vmin);
 }
 #jobs{
   word-wrap: normal;
@@ -102,6 +105,7 @@
 }
 p{
   font-family: lemonMilk-regular;
+  font-size: calc(10px + 2vmin);
 }
 #contact-bar {
   background-color: black;
@@ -116,6 +120,7 @@ h1 {
   font-family: lemonMilk-regular;
   font-size: 70px;
   margin-bottom: 0;
+  
 }
 #wwd{
   height: 95px;
