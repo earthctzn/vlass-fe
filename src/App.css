@@ -84,7 +84,7 @@
   margin: 3em;
   display: grid;
   grid-template-columns: auto auto;
-  grid-column-gap: auto;
+  grid-column-gap: 200px;
 
 }
 #work-div, #work-p{
