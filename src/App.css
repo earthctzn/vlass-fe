@@ -122,7 +122,8 @@ h1 {
 #wwd{
   height: 95px;
   width: auto;
-  margin-left: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
   align-self: center;
 }
 
