@@ -10,8 +10,9 @@ export default function About({ title, content, loading }) {
   return (
     <div className={"section"}>
       <Container className="section-content" id="about">
-        <img src={wwd} id="wwd" alt="stock graphic"></img>
+ 
         <Container id="wwd-content" >
+          <img src={wwd} id="wwd" alt="stock graphic"></img>
             {loading}
             <Row className="abt">
               <Col id="wwd-col" md="auto" >WEB DESIGN</Col>
