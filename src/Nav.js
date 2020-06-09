@@ -47,6 +47,18 @@ class NavBar extends Component {
 
                                     <ul className="nav-items">
                                         <li className="nav-item">
+                                            {isLoggedIn ? 
+                                            <Link
+                                                activeClass="active"
+                                                to="welcome"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-90}
+                                                duration= {700}
+                                            >
+                                                HOME
+                                            </Link>
+                                            :
                                             <Link
                                                 activeClass="active"
                                                 to="welcome"
@@ -56,7 +68,7 @@ class NavBar extends Component {
                                                 duration= {700}
                                             >
                                                 HOME
-                                            </Link>
+                                            </Link>}
                                         </li>
                                         <li className="nav-item">
                                             <Link
