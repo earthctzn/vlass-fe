@@ -118,8 +118,6 @@ h1 {
   font-family: lemonMilk-regular;
   font-size: 70px;
   margin-bottom: 0;
-  font-size: calc(20px + 2vmin);
-
 }
 #wwd{
   height: 95px;
