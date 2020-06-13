@@ -200,6 +200,7 @@ ul{
   text-align: center;
 }
 
+
 .signup{
   display: flex;
   justify-content: center;
@@ -211,13 +212,18 @@ ul{
 }
 
 #contact-h2 {
+
   font-family: lemonMilk-light;
+}
+#contact-a{
+  font-family: lemonMilk-light;
+  color: black;
 }
 
 .signup-card, .login-card{
   background-color: rgba(155, 146, 146, 0.5);
   color: black;
-  width: 250px;
+  width: 200px;
   display: inline-block;
   display: inline-table;
   padding: 10px;
