@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
+import './Responsive.css'
 import NavBar from './Nav'
 import Home from './components/Home'
 import Workflow from './components/Workflow'

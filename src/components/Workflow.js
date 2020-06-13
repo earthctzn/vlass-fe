@@ -11,7 +11,7 @@ export default function Workflow({ title, content, id }) {
        
         <h1>{title}</h1>
         <div id="wf-content">
-          <p>{content}</p>
+          <p id="wf-p">{content}</p>
         </div>
         <img src={Flow} id="wflow" alt="workflow graphic"></img>
       

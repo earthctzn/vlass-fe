@@ -55,3 +55,5 @@ export const updateContact = (csrf_token, title, content, id) => {
         };
     }
 };
+
+// https://vlass-be.herokuapp.com

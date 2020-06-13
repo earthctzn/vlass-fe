@@ -1,0 +1,966 @@
+@media only screen and (max-width: 2560px) {
+    #glass-c{
+      margin-top: 40px;
+      height: 800px;
+      width: 1024px;
+      border-radius: 1em;
+      align-self: center;
+      box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+    }
+    #about-content {
+      max-width: 1024px;
+      text-align: center;
+      overflow-wrap: break-word;
+      font-family: lemonMilk-regular;
+    }
+}
+@media only screen and (max-width: 1920px) {
+  #glass-c{
+    margin-top: 40px;
+    height: 640px;
+    width: 900px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #about-content {
+    max-width: 1024px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: lemonMilk-regular;
+  }
+}
+@media only screen and (max-width: 1440px) {
+
+  .signup{
+    align-self: center;
+  }
+  #forms {
+    width: 400px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  #admin-card {
+    width: 570px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 400px;
+    border-radius: .2in;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: 1.3rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 6em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: medium;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 40rem;
+  }
+  #glass-c{
+    margin-top: 40px;
+    height: 550px;
+    width: 750px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #wwd{
+    height: 6rem;
+    width: 40rem;
+    margin: 0;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: large;
+  }
+  #work-content {
+    margin: 1em;
+    grid-column-gap: 1.5em;
+    grid-template-columns: 13em 13em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: large;
+  }
+  #wflow{
+    height: 5em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 8px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 6rem;
+  }
+  h2{
+    font-size: xx-large;
+  }
+  html{
+    width: 100%
+  }
+  .body{
+    width:100%;
+  }
+    
+}
+@media only screen and (max-width: 900px) {
+
+  .signup{
+    align-self: center;
+  }
+  #forms {
+    width: 300px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  #admin-card {
+    width: 470px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 300px;
+    border-radius: .2in;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: 1rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 6em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: medium;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 20rem;
+  }
+  #wwd{
+    height: 4rem;
+    width: 20rem;
+    margin: 0;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: x-small;
+  }
+  #work-content {
+    margin: 1em;
+    grid-column-gap: 1em;
+    grid-template-columns: 10em 10em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: small;
+  }
+  #wflow{
+    height: 5em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 8px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: large;
+  }
+  html{
+    width: 100%
+  }
+  .body{
+    width:100%;
+  }
+
+  #glass-c{
+    margin-top: 40px;
+    height: 200px;
+    width: 350px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+    
+}
+@media only screen and (max-width: 768px) {
+  .signup{
+    align-self: center;
+
+  }
+  #forms {
+    width: 300px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  #admin-card {
+    width: 470px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 300px;
+    border-radius: .2in;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: .8rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 8em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: medium;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 40rem;
+  }
+  #glass-c{
+    margin-top: 40px;
+    height: 400px;
+    width: 550px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #wwd{
+    height: 7rem;
+    width: 40rem;
+    margin: 0;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: large;
+  }
+  #work-content {
+    margin: 1em;
+    grid-column-gap: 1em;
+    grid-template-columns: 10em 10em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: large;
+  }
+  #wflow{
+    height: 7em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 1rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 5.5rem;
+  }
+  h2{
+    font-size: x-large;
+  }
+  html{
+    width: 110%
+  }
+  .body{
+    width:100%;
+  }
+
+
+}
+@media only screen and (max-width: 600px) {
+
+  .signup{
+    align-self: center;
+  }
+  #forms {
+    width: 300px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  #admin-card {
+    width: 470px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 300px;
+    border-radius: .2in;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: .7rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 6em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: x-small;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 30rem;
+  }
+  #glass-c{
+    margin-top: 40px;
+    height: 300px;
+    width: 450px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #wwd{
+    height: 4rem;
+    width: 20rem;
+    margin: 0;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: x-small;
+  }
+  #work-content {
+    margin: 1em;
+    grid-column-gap: 1em;
+    grid-template-columns: 10em 10em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: small;
+  }
+  #wflow{
+    height: 5em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 8px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: large;
+  }
+  html{
+    width: 100%
+  }
+  .body{
+    width:100%;
+  }
+
+
+    
+}
+@media only screen and (max-width: 500px) {
+
+  .signup{
+    align-self: center;
+  }
+  #forms {
+    width: 200px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  #admin-card {
+    width: 370px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 200px;
+    border-radius: .2in;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: .6rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 6em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: x-small;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 30rem;
+  }
+  #glass-c{
+    margin-top: 40px;
+    height: 300px;
+    width: 450px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #wwd{
+    height: 4.5rem;
+    width: 25rem;
+    margin: 0;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: x-small;
+  }
+  #work-content {
+    margin: 1em;
+    grid-column-gap: 1em;
+    grid-template-columns: 10em 10em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: small;
+  }
+  #wflow{
+    height: 5em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 8px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: large;
+  }
+  html{
+    width: 105%
+  }
+  .body{
+    width:100%;
+  }
+
+
+    
+}
+@media only screen and (max-width: 414px) {
+  .signup{
+    align-self: center;
+
+  }
+  #forms {
+    width: 200px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  #admin-card {
+    width: 370px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 200px;
+    border-radius: .2in;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: .5rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 6em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: x-small;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 20rem;
+  }
+  #wwd{
+    height: 4rem;
+    width: 20rem;
+    margin: 0;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: x-small;
+  }
+  #work-content {
+    margin: 1em;
+    grid-column-gap: 1em;
+    grid-template-columns: 10em 10em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: small;
+  }
+  #wflow{
+    height: 5em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 8px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: large;
+  }
+  html{
+    width: 100%
+  }
+  .body{
+    width:100%;
+  }
+
+  #glass-c{
+    margin-top: 40px;
+    height: 200px;
+    width: 350px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+}
+@media only screen and (max-width: 380px) {
+  .signup{
+    align-self: center;
+
+  }
+  #forms {
+    width: 200px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  #admin-card {
+    width: 370px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 200px;
+    border-radius: .2in;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: .4rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 6.3em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: xx-small;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 20rem;
+  }
+  #glass-c{
+    margin-top: 40px;
+    height: 200px;
+    width: 350px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #wwd{
+    height: 4rem;
+    width: 20rem;
+    margin: 0;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: x-small;
+  }
+  #work-content {
+    margin: 1.5em;
+    grid-column-gap: .5em;
+    grid-template-columns: 10em 10em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: small;
+  }
+  #wflow{
+    height: 5em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 8px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: large;
+  }
+  html{
+    width: 103%
+  }
+  .body{
+    width:100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .signup{
+    align-self: center;
+
+  }
+#forms {
+  margin-left: 2em;
+  margin-right: 2em;
+  display: block;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+  #admin-card {
+    width: 290px;
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: .3in;
+    border-style: solid;
+    border-color: black;
+  }
+  .admin-input{
+    text-align: center;
+    width: 200px;
+    border-radius: .2in;
+    margin-right: 3em;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+  }
+  .nav-items{
+    /* width: 100%; */
+    font-size: .2rem;
+  }
+  .nav-item {
+    display: inline;
+    margin: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  #logout-button{
+    text-align: center;
+    width: 6.3em;
+    border-radius: .2in;
+    background-color: white;
+    font-size: xx-small;
+    border-color: rgba(8, 8, 8, 0.4);
+  }
+  #home-p{
+    text-align: center;
+    word-wrap: normal;
+    width: 20rem;
+  }
+  #glass-c{
+    margin-top: 40px;
+    height: 200px;
+    width: 300px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
+  }
+  #wwd{
+    height: 3rem;
+    width: 16rem;
+    margin: 0;
+  }
+  #wwd-h1  {
+    margin-top: 2em;
+    font-size: 1.5em;
+    font-family: lemonMilk-regular;
+  }
+  #wwd-content {
+    width: auto;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: lemonMilk-light;
+  }
+  #wwd-col{
+    font-size: xx-small;
+  }
+  #about-content {
+    font-size: .9em;
+  }
+  #work-content {
+    margin: 1.5em;
+    grid-column-gap: .5em;
+    grid-template-columns: 9em 9em;    
+  }
+  #work-div, #work-p{
+    word-wrap: normal;
+    font-size: small;
+  }
+  #wflow{
+    height: 5em;
+  }
+  #wf-p{
+    text-align: center;
+  }
+  .row {
+    flex-wrap: nowrap;
+  }
+  #wf-col{
+    font-size: 7px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+  h2{
+    font-size: large;
+  }
+  html{
+    width: 104%
+  }
+  .body{
+    width:100%;
+  }
+}

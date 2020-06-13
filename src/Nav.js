@@ -20,9 +20,9 @@ class NavBar extends Component {
         if (this.props.isLoggedIn === true){
             return (
                 <>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         Hi {this.props.user.username}
-                    </li>
+                    </li> */}
                     <button id="logout-button" onClick={this.handleClick}>
                         logout
                     </button>

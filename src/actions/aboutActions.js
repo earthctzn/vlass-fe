@@ -55,3 +55,5 @@ export const updateAbout = (csrf_token, title, content, id) => {
         };
     }
 };
+
+
