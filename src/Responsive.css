@@ -929,7 +929,7 @@
   #work-content {
     margin: 1.5em;
     grid-column-gap: .5em;
-    grid-template-columns: 9em 9em;    
+    grid-template-columns: 8em 8em;    
   }
   #work-div, #work-p{
     word-wrap: normal;
