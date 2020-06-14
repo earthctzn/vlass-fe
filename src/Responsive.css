@@ -190,7 +190,7 @@
     border-color: rgba(8, 8, 8, 0.4);
   }
   #logo{
-    height: 4em;
+    height: 3.5em;
   }
   #home-p{
     text-align: center;
@@ -239,7 +239,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
@@ -370,7 +370,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: medium;
+    font-size: 1.2rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
