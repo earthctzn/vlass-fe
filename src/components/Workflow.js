@@ -4,11 +4,11 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
 
-export default function Workflow({ title, content, id }) {
+export default function Workflow({ title, content, id , loading}) {
   return (
     <div className={"section"}>
       <div className="section-content" id={id}>
-       
+        {loading}
         <h1>{title}</h1>
         <div id="wf-content">
           <p id="wf-p">{content}</p>

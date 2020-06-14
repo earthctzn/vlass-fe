@@ -8,6 +8,7 @@
 .body{
   display: flex;
   font-family: lemonMilk-regular;
+  width: fit-content;
 }
 #logo{
   margin-bottom: 3em;
@@ -23,23 +24,9 @@
   z-index: 1000;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
 }
-/* #nav-img {
-  height: 40px;
+#home-content{
+  width: 99%;
 }
-#nav-toggle:focus {
-  outline: none;
-}
-#nav-toggle{
-
-  background-color: rgba(248, 243, 243, 0);
-  z-index: 1001;
-  position: absolute;
-  border: none;
-} */
-/* .navtoggle-div{
-
-  position: relative;
-} */
 .nav .nav-content {
 
   margin: 0 auto;
@@ -118,6 +105,8 @@ h1 {
   font-family: lemonMilk-regular;
   font-size: 70px;
   margin-bottom: 0;
+  text-align: center;
+ 
 }
 #wwd{
   height: 95px;

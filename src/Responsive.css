@@ -1,137 +1,5 @@
-@media only screen and (max-width: 2560px) {
 
-  .signup{
-    align-self: center;
-  }
-  #forms {
-    width: 250px;
-    display: block;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-  }
-  #admin-card {
-    width: 570px;
-    display: flexbox;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-    border-radius: .3in;
-    border-style: solid;
-    border-color: black;
-  }
-  .admin-input{
-    text-align: center;
-    width: 400px;
-    border-radius: .2in;
-    background-color: white;
-    border-color: black;
-    border-width: 1px;
-  }
-  .nav {
-    background-color: #ffffff;
-    position: sticky;
-    top: 0px;
-    width: 100%;
-    height: 7em;;
-    z-index: 1000;
-    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
-  }
-  .nav-items{
-    /* width: 100%; */
-    font-size: 3rem;
-  }
-  .nav-item {
-    display: inline;
-    margin: 1.5em;
-    color: #333;
-    text-align: center;
-  }
-  #logout-button{
-    text-align: center;
-    width: 6em;
-    border-radius: .2in;
-    background-color: white;
-    font-size: medium;
-    border-color: rgba(8, 8, 8, 0.4);
-  }
-  #logo{
-    height: 5em;
-  }
-  #home-p{
-    text-align: center;
-    word-wrap: normal;
-    width: 40rem;
-  }
-  #glass-c{
-    margin-top: 40px;
-    height: 850px;
-    width: 1250px;
-    border-radius: 1em;
-    align-self: center;
-    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
-  }
-  #wwd{
-    height: 10rem;
-    width: 70rem;
-    margin: 0;
-  }
-  #wwd-content {
-    width: auto;
-    justify-content: space-evenly;
-    margin-bottom: 0;
-    margin-top: 10px;
-    font-family: lemonMilk-light;
-  }
-  #wwd-col{
-    font-size: xx-large;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  #work-content {
-    margin: 1em;
-    grid-column-gap: 2em;
-    grid-template-columns: 20em 20em;    
-  }
-  #work-div, #work-p{
-    word-wrap: normal;
-    font-size: large;
-  }
-  #wflow{
-    height: 20em;
-  }
-  #wf-p{
-    text-align: center;
-  }
-  .row {
-    flex-wrap: nowrap;
-  }
-  #wf-col{
-    font-size: 3.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-
-  }
-
-  h1{
-    font-size: 6rem;
-  }
-  h2{
-    font-size: xx-large;
-  }
-  html{
-    width: 150%
-  }
-  .body{
-    width:100%;
-  }
-  #footer{
-    font-size: 1.4rem;
-    height: 2em;
-  }
-    
-}
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1920px) {
 
   .signup{
     align-self: center;
@@ -199,15 +67,15 @@
   }
   #glass-c{
     margin-top: 40px;
-    height: 550px;
-    width: 750px;
+    height: 750px;
+    width: 950px;
     border-radius: 1em;
     align-self: center;
     box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
   }
   #wwd{
-    height: 6rem;
-    width: 42rem;
+    height: 8rem;
+    width: 63rem;
     margin: 0;
   }
   #wwd-content {
@@ -218,7 +86,7 @@
     font-family: lemonMilk-light;
   }
   #wwd-col{
-    font-size: large;
+    font-size: 1.9rem;
   }
   #work-content {
     margin: 1em;
@@ -239,7 +107,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
@@ -262,7 +130,7 @@
   }
     
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1201px) and (max-width: 1919px) {
 
   .signup{
     align-self: center;
@@ -361,7 +229,7 @@
     font-size: large;
   }
   #wflow{
-    height: 8em;
+    height: 10em;
   }
   #wf-p{
     text-align: center;
@@ -370,7 +238,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
@@ -391,7 +259,7 @@
   }
     
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
 
   .signup{
     align-self: center;
@@ -439,6 +307,9 @@
     font-size: medium;
     border-color: rgba(8, 8, 8, 0.4);
   }
+  #logo{
+    height: 2em;
+  }
   #home-p{
     text-align: center;
     word-wrap: normal;
@@ -454,7 +325,7 @@
   }
   #wwd{
     height: 6rem;
-    width: 40rem;
+    width: 42rem;
     margin: 0;
   }
   #wwd-content {
@@ -477,7 +348,7 @@
     font-size: large;
   }
   #wflow{
-    height: 14em;
+    height: 10em;
   }
   #wf-p{
     text-align: center;
@@ -499,7 +370,7 @@
     font-size: xx-large;
   }
   html{
-    width: 130%
+    width: 140%;
   }
   .body{
     width:100%;
@@ -507,7 +378,7 @@
 
     
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 900px) and (max-width: 999px) {
 
   .signup{
     align-self: center;
@@ -555,6 +426,9 @@
     font-size: medium;
     border-color: rgba(8, 8, 8, 0.4);
   }
+  #logo{
+    height: 2em;
+  }
   #home-p{
     text-align: center;
     word-wrap: normal;
@@ -570,7 +444,7 @@
   }
   #wwd{
     height: 6rem;
-    width: 43rem;
+    width: 42rem;
     margin: 0;
   }
   #wwd-content {
@@ -593,7 +467,7 @@
     font-size: small;
   }
   #wflow{
-    height: 12em;
+    height: 9em;
   }
   #wf-p{
     text-align: center;
@@ -602,7 +476,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
@@ -615,14 +489,17 @@
     font-size: large;
   }
   html{
-    width: 140%
+    width: 120%
   }
   .body{
     width:100%;
   }
+  #footer{
+    font-size: 1.2rem;
+  }
     
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 899px) {
   .signup{
     align-self: center;
 
@@ -654,7 +531,7 @@
   }
   .nav-items{
     /* width: 100%; */
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .nav-item {
     display: inline;
@@ -670,6 +547,9 @@
     font-size: medium;
     border-color: rgba(8, 8, 8, 0.4);
   }
+  #logo{
+    height: 4em;
+  }
   #home-p{
     text-align: center;
     word-wrap: normal;
@@ -677,15 +557,15 @@
   }
   #glass-c{
     margin-top: 40px;
-    height: 400px;
-    width: 550px;
+    height: 450px;
+    width: 650px;
     border-radius: 1em;
     align-self: center;
     box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
   }
   #wwd{
     height: 5rem;
-    width: 30rem;
+    width: 32rem;
     margin: 0;
   }
   #wwd-content {
@@ -709,7 +589,7 @@
     font-size: large;
   }
   #wflow{
-    height: 10em;
+    height: 8em;
   }
   #wf-p{
     text-align: center;
@@ -718,7 +598,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
@@ -731,15 +611,17 @@
     font-size: x-large;
   }
   html{
-    width: 150%
+    width: 140%
   }
   .body{
-    width:100%;
+    width: 100%;
+  }
+  #footer {
+    font-size: 1.3rem;
   }
 
-
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
 
   .signup{
     align-self: center;
@@ -828,7 +710,7 @@
     font-size: small;
   }
   #wflow{
-    height: 5em;
+    height: 7.5em;
   }
   #wf-p{
     text-align: center;
@@ -837,7 +719,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: 8px;
+    font-size: .7rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
@@ -855,11 +737,13 @@
   .body{
     width:100%;
   }
-
+  #footer{
+    font-size: 1.1rem;
+  }
 
     
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) and (max-width: 599px) {
 
   .signup{
     align-self: center;
@@ -915,7 +799,7 @@
   #glass-c{
     margin-top: 40px;
     height: 300px;
-    width: 450px;
+    width: 400px;
     border-radius: 1em;
     align-self: center;
     box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
@@ -978,7 +862,7 @@
 
     
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 400px) and (max-width: 499px) {
   .signup{
     align-self: center;
 
@@ -1030,6 +914,14 @@
     text-align: center;
     word-wrap: normal;
     width: 20rem;
+  }
+  #glass-c{
+    margin-top: 40px;
+    height: 200px;
+    width: 350px;
+    border-radius: 1em;
+    align-self: center;
+    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
   }
   #wwd{
     height: 3.5rem;
@@ -1084,16 +976,8 @@
     width:100%;
   }
 
-  #glass-c{
-    margin-top: 40px;
-    height: 200px;
-    width: 350px;
-    border-radius: 1em;
-    align-self: center;
-    box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
-  }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (min-width: 321px) and (max-width: 399px) {
   .signup{
     align-self: center;
 
@@ -1125,7 +1009,7 @@
   }
   .nav-items{
     /* width: 100%; */
-    font-size: .6rem;
+    font-size: .9rem;
   }
   .nav-item {
     display: inline;
@@ -1151,15 +1035,15 @@
   }
   #glass-c{
     margin-top: 40px;
-    height: 200px;
-    width: 350px;
+    height: 300px;
+    width: 450px;
     border-radius: 1em;
     align-self: center;
     box-shadow: 5px 5px 6px 0px rgba(75, 74, 74, 0.5);
   }
   #wwd{
-    height: 3.5rem;
-    width: 21rem;
+    height: 4rem;
+    width: 29.5rem;
     margin: 0;
   }
   #wwd-content {
@@ -1170,7 +1054,7 @@
     font-family: lemonMilk-light;
   }
   #wwd-col{
-    font-size: x-small;
+    font-size: small;
   }
   #work-content {
     margin: 1.5em;
@@ -1182,7 +1066,7 @@
     font-size: small;
   }
   #wflow{
-    height: 5em;
+    height: 8em;
   }
   #wf-p{
     text-align: center;
@@ -1191,7 +1075,7 @@
     flex-wrap: nowrap;
   }
   #wf-col{
-    font-size: 8px;
+    font-size: .7em;
     padding-left: 0.5em;
     padding-right: 0.5em;
 
@@ -1204,7 +1088,7 @@
     font-size: large;
   }
   html{
-    width: 120%
+    width: 190%;
   }
   .body{
     width:100%;
@@ -1281,7 +1165,7 @@
   }
   #wwd{
     height: 3rem;
-    width: 18.5rem;
+    width: 19.5rem;
     margin: 0;
   }
   #wwd-h1  {
@@ -1339,3 +1223,4 @@
     width:100%;
   }
 }
+
