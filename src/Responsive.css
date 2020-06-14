@@ -90,8 +90,8 @@
   }
   #work-content {
     margin: 1em;
-    grid-column-gap: 2.5em;
-    grid-template-columns: 30em 30em;    
+    grid-column-gap: 2em;
+    grid-template-columns: 20em 20em;    
   }
   #work-div, #work-p{
     word-wrap: normal;
@@ -222,8 +222,8 @@
   }
   #work-content {
     margin: 1em;
-    grid-column-gap: 2em;
-    grid-template-columns: 27em 27em;    
+    grid-column-gap: 1.5em;
+    grid-template-columns: 20em 20em;    
   }
   #work-div, #work-p{
     word-wrap: normal;
