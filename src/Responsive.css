@@ -90,8 +90,8 @@
   }
   #work-content {
     margin: 1em;
-    grid-column-gap: 1.5em;
-    grid-template-columns: 13em 13em;    
+    grid-column-gap: 2.5em;
+    grid-template-columns: 30em 30em;    
   }
   #work-div, #work-p{
     word-wrap: normal;
@@ -126,7 +126,7 @@
     width:100%;
   }
   #footer{
-    font-size: 5rem;
+    font-size: 1.4rem;
     height: 2em;
   }
     
@@ -222,8 +222,8 @@
   }
   #work-content {
     margin: 1em;
-    grid-column-gap: 1.5em;
-    grid-template-columns: 13em 13em;    
+    grid-column-gap: 2em;
+    grid-template-columns: 27em 27em;    
   }
   #work-div, #work-p{
     word-wrap: normal;
@@ -258,7 +258,7 @@
     width:100%;
   }
   #footer{
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
     
 }
