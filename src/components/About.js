@@ -12,8 +12,8 @@ export default function About({ title, content, loading }) {
       <Container className="section-content" id="about">
  
         <Container id="wwd-content" >
-          <img src={wwd} id="wwd" alt="stock graphic"></img>
-            {loading}
+          {loading}
+          <img src={wwd} id="wwd" alt="stock graphic"></img> 
             <Row className="abt">
               <Col id="wwd-col" md="auto" >WEB DESIGN</Col>
               <Col id="wwd-col" md="auto">CONTENT CREATION</Col>
