@@ -223,8 +223,8 @@
   }
   #work-content {
     margin: 1em;
-    grid-column-gap: 1.5em;
-    grid-template-columns: 13em 13em;    
+    grid-column-gap: 2em;
+    grid-template-columns: 23em 23em;    
   }
   #work-div, #work-p{
     word-wrap: normal;
