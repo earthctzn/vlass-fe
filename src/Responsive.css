@@ -83,6 +83,9 @@
   #about-content {
     font-size: 1.2em;
   }
+  #wwd-content{
+    width: inherit;
+  }
   #wwd-col{
     font-size: 1.9rem;
   }
