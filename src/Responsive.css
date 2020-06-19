@@ -1093,7 +1093,7 @@
     width: 100%;
   }
   .body{
-    width:100%;
+    width: fit-content;
   }
   #footer{
     font-size: 1rem;;
