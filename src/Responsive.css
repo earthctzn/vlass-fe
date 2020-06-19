@@ -1090,7 +1090,7 @@
     font-size: large;
   }
   html{
-    width: 100%;
+    width: fit-content;
   }
   body{
     width: fit-content;
