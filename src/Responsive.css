@@ -372,10 +372,10 @@
     font-size: xx-large;
   }
   html{
-    width: auto;
+    width: fit-content;
   }
   .body{
-    width: auto;
+    width: fit-content;
   }
 
     
@@ -491,10 +491,10 @@
     font-size: large;
   }
   html{
-    width: 120%
+    width: fit-content;
   }
-  .body{
-    width:100%;
+  body{
+    width: fit-content;
   }
   #footer{
     font-size: 1.2rem;
