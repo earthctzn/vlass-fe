@@ -291,26 +291,26 @@ input:focus, textarea:focus, #signup-button, #login-button, #home-button, #abt-b
   padding: 5px 0 5px 0;
 }
 
-  #footer a {
-    color: #24a4ad;
-  }
-  #footer a:hover {
-    color: #8224ad;
-    text-decoration: none;
-  }
+#footer a {
+  color: #24a4ad;
+}
+#footer a:hover {
+  color: #8224ad;
+  text-decoration: none;
+}
 
-  #footer strong, #footer b {
-    color: #070606;
-  }
+#footer strong, #footer b {
+  color: #070606;
+}
 
-  #footer .copyright {
+#footer .copyright {
 
-    font-size: 1em;
-    margin: 0 0 2em 0;
-    padding: 0;
-    text-align: center;
-    display: block;
-  }
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+}
 
 
 
